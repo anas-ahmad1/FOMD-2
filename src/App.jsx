@@ -1,13 +1,13 @@
-import './App.css'
-import './../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import "./App.css";
+import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Gallery from "./pages/Gallery.jsx";
 
 function App() {
-
   return (
     <>
-      <h1>Hello</h1>
+      <Gallery />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

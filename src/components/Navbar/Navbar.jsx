@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="main-container">
+    <div className="main-container-nav">
       <nav className="nav-container">
         <div className="nav-container-left">
           <a href="#">

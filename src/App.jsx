@@ -1,16 +1,24 @@
 import "./App.css";
 import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Gallery from "./pages/Gallery.jsx";
-import Navbar from './components/Navbar/Navbar.jsx';
+import "./../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./../node_modules/slick-carousel/slick/slick.css";
+import "./../node_modules/slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+import Navbar from "./components/Navbar/Navbar.jsx";
 import Homepage from "./pages/Homepage/Homepage.jsx";
+import Blog1 from "./pages/Blogs/Blog1.jsx";
+import Gallery from "./pages/Gallery/Gallery.jsx";
 
 function App() {
   return (
     <>
-    <div className="app-container">
-      <Navbar/>
-      <Homepage/>
-    </div>
+      <div className="app-container">
+        <Navbar />
+        {/* <Homepage /> */}
+        {/* <Blog1 /> */}
+        <Gallery />
+      </div>
     </>
   );
 }

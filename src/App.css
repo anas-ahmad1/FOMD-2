@@ -1,3 +1,6 @@
-.app-container{
-    background-color: #EAF6FC;
+.app-container {
+  background-color: #eaf6fc;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }

@@ -9,7 +9,7 @@ const HomeMainView = () => {
         <div className="view-one-container">
           <div className="view-one-container-left">
             <div className="title-text-primary">
-              Boost the value of your <br /> home before you sell
+              Boost the value of your home before you sell
             </div>
             <div className="title-text-secondary">
               Know someone selling? Earn $500+ for a referral !

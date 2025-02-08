@@ -26,11 +26,11 @@ const Navbar = () => {
 
           <div className={`nav-container-right ${isOpen ? "open" : ""}`}>
             <div className="close-btn" onClick={toggleMenu}>&times;</div>
-            <div className="nav-item"><a className="nav-link" href="#">Home</a></div>
+            <div className="nav-item"><a className="nav-link" href="/">Home</a></div>
             <div className="nav-item"><a className="nav-link" href="#">Gallery</a></div>
             <div className="nav-item"><a className="nav-link" href="#">Services</a></div>
             <div className="nav-item"><a className="nav-link" href="#">Blogs</a></div>
-            <div className="nav-item nav-contact"><a className="nav-link" href="#">Contact Us</a></div>
+            <div className="nav-item nav-contact"><a className="nav-link" href="/contactus">Contact Us</a></div>
           </div>
       </nav>
       </div>

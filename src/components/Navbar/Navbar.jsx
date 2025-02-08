@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="main-container-nav">
       <nav className="nav-container">
         <div className="nav-container-left">
-          <a href="#">
+          <a href="/">
             <img src={logo} className="nav-logo" alt="" />
           </a>
         </div>
@@ -28,7 +28,7 @@ const Navbar = () => {
             <div className="close-btn" onClick={toggleMenu}>&times;</div>
             <div className="nav-item"><a className="nav-link" href="/">Home</a></div>
             <div className="nav-item"><a className="nav-link" href="/gallery">Gallery</a></div>
-            <div className="nav-item"><a className="nav-link" href="#">Services</a></div>
+            <div className="nav-item"><a className="nav-link" href="/services">Services</a></div>
             <div className="nav-item"><a className="nav-link" href="#">Blogs</a></div>
             <div className="nav-item nav-contact"><a className="nav-link" href="/contactus">Contact Us</a></div>
           </div>

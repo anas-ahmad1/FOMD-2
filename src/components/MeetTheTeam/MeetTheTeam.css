@@ -1,0 +1,121 @@
+.view-five-main-container{
+    width: 100%;
+    height: 130vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAF6FC;
+}
+
+
+@media (max-width: 1300px) {
+
+
+    .team-members-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5rem;
+    }
+
+
+    .team-member{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .team-member img{
+        height: 20rem;
+        width: 20rem;
+        border-radius: 100%;
+    }
+
+    .team-member-name{
+        font-family: 'Poppins';
+        font-size: 3rem;
+        text-align: center;
+        color: #3A6D8C;
+    }
+
+    .team-member-designation{
+        font-family: 'Poppins';
+        font-size: 1.5rem;
+        text-align: center;
+        color: #6A9AB0;
+    }
+
+    .team-member-detail{
+        font-family: 'Poppins';
+        width: 20rem;
+        text-align: center;
+        color: #3A6D8C;
+    }
+
+}
+
+
+@media (max-width: 768px) and (max-height: 750px) {
+    .view-five-main-container{
+        height: 140vh;
+    }
+}
+
+@media (max-width: 768px) and (min-height: 751px) {
+    .view-five-main-container{
+        height: 110vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .team-members-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+    
+    
+    .team-member{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .team-member img{
+        height: 12rem;
+        width: 12rem;
+        border-radius: 100%;
+    }
+    
+    .team-member-name{
+        font-family: 'Poppins';
+        font-size: 2.2rem;
+        text-align: center;
+        color: #3A6D8C;
+    }
+    
+    .team-member-designation{
+        font-family: 'Poppins';
+        font-size: 1.3rem;
+        text-align: center;
+        color: #6A9AB0;
+        margin-top: -0.5rem;
+    }
+    
+    .team-member-detail{
+        font-family: 'Poppins';
+        width: 15rem;
+        text-align: center;
+        color: #3A6D8C;
+        margin-top: 0.5rem;
+    }
+
+}

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function Gallery() {
   const [centerPadding, setCenterPadding] = useState("50px");
-  const [showArrows, setShowArrows] = useState(false);
+  const [isPc, setIsPc] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -14,7 +14,7 @@ export default function Gallery() {
           ? "100px"
           : "50px"
       );
-      setShowArrows(window.innerWidth >= 576);
+      setIsPc(window.innerWidth >= 576);
     };
 
     handleResize();
@@ -22,21 +22,22 @@ export default function Gallery() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const arrowStyles = {
+    background: "black",
+    display: "block",
+    position: "absolute",
+    transform: "translateY(-50%)",
+    zIndex: 10,
+    borderRadius: "50%",
+    cursor: "pointer",
+  };
+
   function SampleNextArrow(props) {
     const { onClick } = props;
     return (
       <div
         className="slick-arrow"
-        style={{
-          background: "black",
-          display: "block",
-          position: "absolute",
-          right: "-20px",
-          top: "50%",
-          transform: "translateY(-50%)",
-          zIndex: 10,
-          borderRadius: "50%",
-        }}
+        style={{ ...arrowStyles, right: "-20px", top: "50%" }}
         onClick={onClick}
       >
         <svg
@@ -59,16 +60,9 @@ export default function Gallery() {
       <div
         className="slick-arrow"
         style={{
-          background: "black",
-          display: "block",
-          width: "40px",
-          height: "40px",
-          position: "absolute",
+          ...arrowStyles,
           left: "-20px",
           top: "50%",
-          transform: "translateY(-50%)",
-          zIndex: 10,
-          borderRadius: "50%",
         }}
         onClick={onClick}
       >
@@ -88,17 +82,53 @@ export default function Gallery() {
 
   const settings = {
     className: "center",
-    centerMode: true,
+    centerMode: isPc,
     infinite: true,
     centerPadding,
     slidesToShow: 1,
     speed: 500,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    arrows: showArrows,
+    arrows: isPc,
   };
 
-  return (
+  return isPc ? (
+    <div className="d-flex align-items-center justify-content-center mt-4">
+      <div
+        className="flex-grow-1 h-100 rounded-end"
+        style={{ backgroundColor: "#001F3F" }}
+      ></div>
+      <div className="py-4" style={{ width: "84%" }}>
+        <Slider {...settings}>
+          <div className="px-2 px-sm-3 px-md-4">
+            <img
+              src="https://images.pexels.com/photos/3288100/pexels-photo-3288100.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              className="w-100 rounded"
+              alt="img"
+            />
+          </div>
+          <div className="px-2 px-sm-3 px-md-4">
+            <img
+              src="https://images.pexels.com/photos/3288102/pexels-photo-3288102.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              className="w-100 rounded"
+              alt="img"
+            />
+          </div>
+          <div className="px-2 px-sm-3 px-md-4">
+            <img
+              src="https://images.pexels.com/photos/3288103/pexels-photo-3288103.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              className="w-100 rounded"
+              alt="img"
+            />
+          </div>
+        </Slider>
+      </div>
+      <div
+        className="flex-grow-1 h-100 rounded-start"
+        style={{ backgroundColor: "#001F3F" }}
+      ></div>
+    </div>
+  ) : (
     <div className="vh-100 d-flex align-items-center">
       <div className="container">
         <Slider {...settings}>

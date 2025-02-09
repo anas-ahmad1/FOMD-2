@@ -92,6 +92,7 @@ const ContactUs = () => {
               <div className="form-row">
                 <div className="input-container">
                   <textarea
+                  style={{ resize: "none" }}
                     id="message"
                     name="message"
                     rows="4"

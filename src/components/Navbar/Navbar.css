@@ -76,6 +76,20 @@
 }
 
 
+.nav-item.active {
+    color: #e5874e;  
+}
+
+.nav-item.active::after {
+    width: 100%;
+}
+
+.nav-contact.contact-active {
+    background-color: #e5874e;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
 
 .nav-contact {
     background-color: #F59E67;
@@ -148,6 +162,7 @@
         align-items: center;
         padding-top: 3rem;
         transition: right 0.3s ease-in-out;
+        z-index: 3;
     }
 
     .nav-container-right.open {

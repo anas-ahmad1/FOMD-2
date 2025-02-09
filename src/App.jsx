@@ -11,17 +11,23 @@ import BlogIndex from "./pages/Blogs/BlogIndex.jsx";
 import Blog1 from "./pages/Blogs/Blog1.jsx";
 import Blog2 from "./pages/Blogs/Blog2.jsx";
 import Gallery from "./pages/Gallery/Gallery.jsx";
+import ContactUs from "./pages/ContactUs/ContactUs.jsx";
+import Services from "./pages/Services/Services.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <div className="app-container">
-        <Navbar />
-        {/* <Homepage /> */}
-        {/* <BlogIndex /> */}
-        {/* <Blog1 /> */}
-        <Blog2 />
-        {/* <Gallery /> */}
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/services" element={<Services />} />
+          </Routes>
+        </Router>
       </div>
     </>
   );

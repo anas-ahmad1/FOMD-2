@@ -53,6 +53,7 @@
 
     .contact-us-detail{
         font-size: 0.9rem;
+        color: #001F3F;
     }
 
 
@@ -120,6 +121,12 @@
         color: white;
         font-weight: 700;
         background-color: #F59E67;
+    }
+
+    .form-button:hover{
+        background-color: #e88d55;
+        /* transform: scale(1.05);  */
+        transition: all 0.3s ease-in-out;
     }
 
     .input-container input {

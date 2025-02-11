@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import { useState, useEffect } from "react";
+import "./Gallery.css";
 
 export default function Gallery() {
   const [centerPadding, setCenterPadding] = useState("50px");
@@ -93,42 +94,45 @@ export default function Gallery() {
   };
 
   return isPc ? (
-    <div className="d-flex align-items-center justify-content-center mt-4">
-      <div
-        className="flex-grow-1 h-100 rounded-end"
-        style={{ backgroundColor: "#001F3F" }}
-      ></div>
-      <div className="py-4" style={{ width: "84%" }}>
-        <Slider {...settings}>
-          <div className="px-2 px-sm-3 px-md-4">
-            <img
-              src="https://images.pexels.com/photos/3288100/pexels-photo-3288100.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="w-100 rounded"
-              alt="img"
-            />
-          </div>
-          <div className="px-2 px-sm-3 px-md-4">
-            <img
-              src="https://images.pexels.com/photos/3288102/pexels-photo-3288102.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="w-100 rounded"
-              alt="img"
-            />
-          </div>
-          <div className="px-2 px-sm-3 px-md-4">
-            <img
-              src="https://images.pexels.com/photos/3288103/pexels-photo-3288103.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="w-100 rounded"
-              alt="img"
-            />
-          </div>
-        </Slider>
+    <div className="gallery-main-container">
+      <div className="d-flex align-items-center justify-content-center pt-4">
+        <div
+          className="flex-grow-1 vh-100 rounded-end"
+          style={{ backgroundColor: "#001F3F" }}
+        ></div>
+        <div className="py-4" style={{ width: "84%" }}>
+          <Slider {...settings}>
+            <div className="px-2 px-sm-3 px-md-4">
+              <img
+                src="https://images.pexels.com/photos/3288100/pexels-photo-3288100.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                className="w-100 rounded"
+                alt="img"
+              />
+            </div>
+            <div className="px-2 px-sm-3 px-md-4">
+              <img
+                src="https://images.pexels.com/photos/3288102/pexels-photo-3288102.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                className="w-100 rounded"
+                alt="img"
+              />
+            </div>
+            <div className="px-2 px-sm-3 px-md-4">
+              <img
+                src="https://images.pexels.com/photos/3288103/pexels-photo-3288103.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                className="w-100 rounded"
+                alt="img"
+              />
+            </div>
+          </Slider>
+        </div>
+        <div
+          className="flex-grow-1 vh-100 rounded-start"
+          style={{ backgroundColor: "#001F3F" }}
+        ></div>
       </div>
-      <div
-        className="flex-grow-1 h-100 rounded-start"
-        style={{ backgroundColor: "#001F3F" }}
-      ></div>
     </div>
   ) : (
+    <div className="gallery-main-container">
     <div className="vh-100 d-flex align-items-center">
       <div className="container">
         <Slider {...settings}>
@@ -155,6 +159,7 @@ export default function Gallery() {
           </div>
         </Slider>
       </div>
+    </div>
     </div>
   );
 }

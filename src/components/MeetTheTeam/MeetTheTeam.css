@@ -10,6 +10,51 @@
 }
 
 
+.team-members-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10rem;
+}
+
+
+.team-member{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-member img{
+    height: 25rem;
+    width: 25rem;
+    border-radius: 100%;
+}
+
+.team-member-name{
+    font-family: 'Poppins';
+    font-size: 4rem;
+    text-align: center;
+    color: #3A6D8C;
+}
+
+.team-member-designation{
+    font-family: 'Poppins';
+    font-size: 2rem;
+    text-align: center;
+    color: #6A9AB0;
+}
+
+.team-member-detail{
+    font-family: 'Poppins';
+    width: 25rem;
+    text-align: center;
+    color: #3A6D8C;
+    font-size: 1.2rem;
+}
+
+
+
 @media (max-width: 1300px) {
 
 
@@ -26,7 +71,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* align-items: center; */
     }
 
     .team-member img{
@@ -52,6 +96,7 @@
     .team-member-detail{
         font-family: 'Poppins';
         width: 20rem;
+        font-size: 1rem;
         text-align: center;
         color: #3A6D8C;
     }

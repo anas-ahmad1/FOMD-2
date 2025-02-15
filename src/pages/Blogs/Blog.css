@@ -2,3 +2,10 @@
     background-color: #EAF6FC;
     padding-top: 8rem;
 }
+
+
+@media (max-width: 768px) {
+    .blog-main-container{
+        padding-top: 2rem;
+    }
+}

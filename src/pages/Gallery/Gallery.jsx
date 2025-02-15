@@ -133,33 +133,37 @@ export default function Gallery() {
     </div>
   ) : (
     <div className="gallery-main-container">
-    <div className="vh-100 d-flex align-items-center">
-      <div className="container">
-        <Slider {...settings}>
-          <div className="px-2 px-sm-3 px-md-4">
-            <img
-              src="https://images.pexels.com/photos/3288100/pexels-photo-3288100.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="w-100 rounded"
-              alt="img"
-            />
+      <div className="vh-100 d-flex">
+        <div className="container">
+          <div className="heading mb-2">Gallery</div>
+          <div className="subHeading mb-6">
+            See the stunning spaces we've transformed!
           </div>
-          <div className="px-2 px-sm-3 px-md-4">
-            <img
-              src="https://images.pexels.com/photos/3288102/pexels-photo-3288102.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="w-100 rounded"
-              alt="img"
-            />
-          </div>
-          <div className="px-2 px-sm-3 px-md-4">
-            <img
-              src="https://images.pexels.com/photos/3288103/pexels-photo-3288103.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="w-100 rounded"
-              alt="img"
-            />
-          </div>
-        </Slider>
+          <Slider {...settings}>
+            <div className="px-2 px-sm-3 px-md-4">
+              <img
+                src="https://images.pexels.com/photos/3288100/pexels-photo-3288100.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                className="w-100 rounded"
+                alt="img"
+              />
+            </div>
+            <div className="px-2 px-sm-3 px-md-4">
+              <img
+                src="https://images.pexels.com/photos/3288102/pexels-photo-3288102.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                className="w-100 rounded"
+                alt="img"
+              />
+            </div>
+            <div className="px-2 px-sm-3 px-md-4">
+              <img
+                src="https://images.pexels.com/photos/3288103/pexels-photo-3288103.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                className="w-100 rounded"
+                alt="img"
+              />
+            </div>
+          </Slider>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

@@ -1,11 +1,13 @@
+import "./BlogIndex.css";
+
 const BlogIndex = () => {
   return (
     <>
-      <section className="bsb-blog-5 py-3 py-md-5 py-xl-8">
+      <section className="bsb-blog-5 py-3 py-md-5 py-xl-8 blog-index-main-container">
         <div className="container">
           <div className="row justify-content-md-center">
             <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-              <h2 className="display-5 mb-4 mb-md-5 text-center">
+              <h2 className="display-5 mb-4 mb-md-5 text-center blog-index-text-primary">
                 Articles and more!
               </h2>
               <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
@@ -18,7 +20,7 @@ const BlogIndex = () => {
             <div className="col-12 col-lg-4">
               <div className="card border-0 bg-white">
                 <figure className="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-                  <a href="#!">
+                  <a href="/blog-1">
                     <img
                       className="img-fluid bsb-scale bsb-hover-scale-up"
                       loading="lazy"
@@ -82,7 +84,7 @@ const BlogIndex = () => {
             <div className="col-12 col-lg-4">
               <div className="card border-0 bg-white">
                 <figure className="card-img-top mb-4 overflow-hidden bsb-overlay-hover">
-                  <a href="#!">
+                  <a href="/blog-2">
                     <img
                       className="img-fluid bsb-scale bsb-hover-scale-up"
                       loading="lazy"

@@ -26,6 +26,9 @@ function App() {
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/blogs" element={<BlogIndex />} />
+            <Route path="/blog-1" element={<Blog1 />} />
+            <Route path="/blog-2" element={<Blog2 />} />
           </Routes>
         </Router>
       </div>

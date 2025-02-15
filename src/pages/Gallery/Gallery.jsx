@@ -135,7 +135,7 @@ export default function Gallery() {
     <div className="gallery-main-container">
       <div className="vh-100 d-flex">
         <div className="container">
-          <div className="heading mb-2">Gallery</div>
+          <div className="gallery-heading mb-2">Gallery</div>
           <div className="subHeading mb-6">
             See the stunning spaces we've transformed!
           </div>

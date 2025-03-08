@@ -1,15 +1,26 @@
 import Slider from "react-slick";
 import { useState, useEffect } from "react";
 import "./Gallery.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-
-const images = Object.values(
-  import.meta.glob("../../assets/gallery/*.jpg", { eager: true, import: "default" })
-);
 
 export default function Gallery() {
   const [centerPadding, setCenterPadding] = useState("50px");
   const [isPc, setIsPc] = useState(false);
+
+  const [imagePaths, setImagePaths] = useState([]);
+
+  useEffect(() => {
+    const importImages = async () => {
+      const images = Object.values(
+        import.meta.glob("../../assets/gallery/*.jpg", {
+          eager: true,
+          import: "default",
+        })
+      );
+      setImagePaths(images);
+    };
+
+    importImages();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -92,34 +103,54 @@ export default function Gallery() {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     arrows: isPc,
+    lazyLoad: true,
   };
-
 
   return (
     <div className="gallery-main-container">
-      <div className={isPc ? "d-flex align-items-center justify-content-center pt-4" : "vh-100 d-flex"}>
-        {isPc && <div className="flex-grow-1 vh-100 rounded-end" style={{ backgroundColor: "#001F3F" }}></div>}
-        <div className={isPc ? "py-4" : "container"} style={isPc ? { width: "84%" } : {}}>
+      <div
+        className={
+          isPc
+            ? "d-flex align-items-center justify-content-center pt-4"
+            : "vh-100 d-flex"
+        }
+      >
+        {isPc && (
+          <div
+            className="flex-grow-1 vh-100 rounded-end"
+            style={{ backgroundColor: "#001F3F" }}
+          ></div>
+        )}
+        <div
+          className={isPc ? "py-4" : "container"}
+          style={isPc ? { width: "84%" } : {}}
+        >
           {!isPc && (
             <>
               <div className="gallery-heading mb-2">Gallery</div>
-              <div className="subHeading mb-6">See the stunning spaces we've transformed!</div>
+              <div className="subHeading mb-6">
+                See the stunning spaces we've transformed!
+              </div>
             </>
           )}
           <Slider {...settings}>
-            {images.map((img, index) => (
+            {imagePaths.map((img, index) => (
               <div key={index} className="px-2 px-sm-3 px-md-4">
-              <LazyLoadImage
-                src={img}
-                alt={`Gallery image ${index + 1}`}
-                effect="blur"
-                className="w-100 rounded"
-              />
-            </div>
+                <img
+                  src={img}
+                  alt={`Gallery image ${index + 1}`}
+                  className="w-100 rounded"
+                />
+              </div>
             ))}
           </Slider>
         </div>
-        {isPc && <div className="flex-grow-1 vh-100 rounded-start" style={{ backgroundColor: "#001F3F" }}></div>}
+        {isPc && (
+          <div
+            className="flex-grow-1 vh-100 rounded-start"
+            style={{ backgroundColor: "#001F3F" }}
+          ></div>
+        )}
       </div>
     </div>
   );

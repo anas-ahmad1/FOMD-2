@@ -2,19 +2,76 @@ import React from "react";
 import "./ContactUs.css";
 import FormMobile from "../../assets/mobile-form.png";
 import FormEmail from "../../assets/email-form.png";
-import Email from "../../assets/email.png"; 
-import Mobile from "../../assets/mobile.png"; 
-import Location from "../../assets/location.png"; 
+import Email from "../../assets/email.png";
+import Mobile from "../../assets/mobile.png";
+import Location from "../../assets/location.png";
+import { useState } from "react";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactUs = () => {
+  
+  const [formValues, setFormValues] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = {
+      firstName: formValues.firstName,
+      lastName: formValues.lastName,
+      email: formValues.email,
+      phone: formValues.phone,
+      message: formValues.message,
+    };
+
+    emailjs
+      .send(
+        "service_f6hifl4",
+        "template_tz6ppw9",
+        formData,
+        "pHLOvq98OT9IEH6t3"
+      )
+      .then(
+        (response) => {
+          toast.success("Form submitted successfully!", {
+            position: "top-right",
+            autoClose: 3000,
+          });
+
+          setFormValues({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+
+          setIsSubmitting(false);
+        },
+        (error) => {
+          toast.error("Failed to send email. Please try again!", {
+            position: "top-right",
+            autoClose: 3000,
+          });
+          
+          setIsSubmitting(false);
+        }
+      );
   };
 
   return (
     <>
       <div className="contact-us-container">
-
         <div className="contact-us-left-container">
           <div className="contact-us-heading">Contact Us</div>
           <div className="contact-us-text-secondary">
@@ -33,10 +90,7 @@ const ContactUs = () => {
             <img src={Mobile} />
             <div className="contact-us-detail">713 497 6931</div>
           </div>
-          
         </div>
-
-
 
         <div className="contact-us-right-container">
           <div className="contact-us-form">
@@ -53,6 +107,13 @@ const ContactUs = () => {
                     name="firstName"
                     placeholder="First Name"
                     required
+                    value={formValues.firstName}
+                    onChange={(e) =>
+                      setFormValues({
+                        ...formValues,
+                        firstName: e.target.value,
+                      })
+                    }
                   />
                 </div>
                 <div className="input-container">
@@ -62,6 +123,10 @@ const ContactUs = () => {
                     name="lastName"
                     placeholder="Last Name"
                     required
+                    value={formValues.lastName}
+                    onChange={(e) =>
+                      setFormValues({ ...formValues, lastName: e.target.value })
+                    }
                   />
                 </div>
               </div>
@@ -74,6 +139,10 @@ const ContactUs = () => {
                     name="email"
                     placeholder="Your Email"
                     required
+                    value={formValues.email}
+                    onChange={(e) =>
+                      setFormValues({ ...formValues, email: e.target.value })
+                    }
                   />
                 </div>
               </div>
@@ -86,27 +155,36 @@ const ContactUs = () => {
                     name="phone"
                     placeholder="Phone Number"
                     required
+                    value={formValues.phone}
+                    onChange={(e) =>
+                      setFormValues({ ...formValues, phone: e.target.value })
+                    }
                   />
                 </div>
               </div>
               <div className="form-row">
                 <div className="input-container">
                   <textarea
-                  style={{ resize: "none" }}
+                    style={{ resize: "none" }}
                     id="message"
                     name="message"
                     rows="4"
                     cols="50"
                     placeholder="How can we help? "
+                    value={formValues.message}
+                    onChange={(e) =>
+                      setFormValues({ ...formValues, message: e.target.value })
+                    }
                   ></textarea>
                 </div>
               </div>
               <div className="form-row">
-                <button className="form-button">Submit</button>
+                <button className="form-button" disabled={isSubmitting}>{isSubmitting ? <span className="spinner"></span> : "Submit"}</button>
               </div>
             </form>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </>
   );

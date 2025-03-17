@@ -3,8 +3,8 @@ import "./MeetTheTeam.css";
 import experience from "../../assets/experience.png";
 import personalized from "../../assets/personalized.png";
 import network from "../../assets/network.png";
-import teamMember1 from "../../assets/teamMember1.jpeg";
-import teamMember2 from "../../assets/teamMember2.jpeg";
+import teamMember1 from "../../assets/teamMember1.jpg";
+import teamMember2 from "../../assets/teamMember2.jpg";
 
 const MeetTheTeam = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);

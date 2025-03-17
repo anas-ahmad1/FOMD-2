@@ -6,6 +6,22 @@ export default function Gallery() {
   const [centerPadding, setCenterPadding] = useState("50px");
   const [isPc, setIsPc] = useState(false);
 
+  const [imagePaths, setImagePaths] = useState([]);
+
+  useEffect(() => {
+    const importImages = async () => {
+      const images = Object.values(
+        import.meta.glob("../../assets/gallery/*.jpg", {
+          eager: true,
+          import: "default",
+        })
+      );
+      setImagePaths(images);
+    };
+
+    importImages();
+  }, []);
+
   useEffect(() => {
     const handleResize = () => {
       setCenterPadding(
@@ -60,11 +76,7 @@ export default function Gallery() {
     return (
       <div
         className="slick-arrow"
-        style={{
-          ...arrowStyles,
-          left: "-20px",
-          top: "50%",
-        }}
+        style={{ ...arrowStyles, left: "-20px", top: "50%" }}
         onClick={onClick}
       >
         <svg
@@ -91,78 +103,54 @@ export default function Gallery() {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     arrows: isPc,
+    lazyLoad: true,
   };
 
-  return isPc ? (
+  return (
     <div className="gallery-main-container">
-      <div className="d-flex align-items-center justify-content-center pt-4">
+      <div
+        className={
+          isPc
+            ? "d-flex align-items-center justify-content-center pt-4"
+            : "vh-100 d-flex"
+        }
+      >
+        {isPc && (
+          <div
+            className="flex-grow-1 vh-100 rounded-end"
+            style={{ backgroundColor: "#001F3F" }}
+          ></div>
+        )}
         <div
-          className="flex-grow-1 vh-100 rounded-end"
-          style={{ backgroundColor: "#001F3F" }}
-        ></div>
-        <div className="py-4" style={{ width: "84%" }}>
+          className={isPc ? "py-4" : "container"}
+          style={isPc ? { width: "84%" } : {}}
+        >
+          {!isPc && (
+            <>
+              <div className="gallery-heading mb-2">Gallery</div>
+              <div className="subHeading mb-6">
+                See the stunning spaces we've transformed!
+              </div>
+            </>
+          )}
           <Slider {...settings}>
-            <div className="px-2 px-sm-3 px-md-4">
-              <img
-                src="https://images.pexels.com/photos/3288100/pexels-photo-3288100.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                className="w-100 rounded"
-                alt="img"
-              />
-            </div>
-            <div className="px-2 px-sm-3 px-md-4">
-              <img
-                src="https://images.pexels.com/photos/3288102/pexels-photo-3288102.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                className="w-100 rounded"
-                alt="img"
-              />
-            </div>
-            <div className="px-2 px-sm-3 px-md-4">
-              <img
-                src="https://images.pexels.com/photos/3288103/pexels-photo-3288103.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                className="w-100 rounded"
-                alt="img"
-              />
-            </div>
+            {imagePaths.map((img, index) => (
+              <div key={index} className="px-2 px-sm-3 px-md-4">
+                <img
+                  src={img}
+                  alt={`Gallery image ${index + 1}`}
+                  className="w-100 rounded"
+                />
+              </div>
+            ))}
           </Slider>
         </div>
-        <div
-          className="flex-grow-1 vh-100 rounded-start"
-          style={{ backgroundColor: "#001F3F" }}
-        ></div>
-      </div>
-    </div>
-  ) : (
-    <div className="gallery-main-container">
-      <div className="vh-100 d-flex">
-        <div className="container">
-          <div className="gallery-heading mb-2">Gallery</div>
-          <div className="subHeading mb-6">
-            See the stunning spaces we've transformed!
-          </div>
-          <Slider {...settings}>
-            <div className="px-2 px-sm-3 px-md-4">
-              <img
-                src="https://images.pexels.com/photos/3288100/pexels-photo-3288100.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                className="w-100 rounded"
-                alt="img"
-              />
-            </div>
-            <div className="px-2 px-sm-3 px-md-4">
-              <img
-                src="https://images.pexels.com/photos/3288102/pexels-photo-3288102.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                className="w-100 rounded"
-                alt="img"
-              />
-            </div>
-            <div className="px-2 px-sm-3 px-md-4">
-              <img
-                src="https://images.pexels.com/photos/3288103/pexels-photo-3288103.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                className="w-100 rounded"
-                alt="img"
-              />
-            </div>
-          </Slider>
-        </div>
+        {isPc && (
+          <div
+            className="flex-grow-1 vh-100 rounded-start"
+            style={{ backgroundColor: "#001F3F" }}
+          ></div>
+        )}
       </div>
     </div>
   );

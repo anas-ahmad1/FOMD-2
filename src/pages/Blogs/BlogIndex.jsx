@@ -3,6 +3,9 @@ import "./BlogIndex.css";
 const BlogIndex = () => {
   return (
     <>
+      <title>Blog | Flip on My Dime - Home Selling & Renovation Tips</title>
+      <meta name="description" content="Read expert tips on home upgrades, selling strategies, and market trends from Flip on My Dime. Learn how to increase your home's value before selling." />
+
       <section className="bsb-blog-5 py-3 py-md-5 py-xl-8 blog-index-main-container">
         <div className="container">
           <div className="row justify-content-md-center">

@@ -10,6 +10,9 @@ import MeetTheTeam from "../../components/MeetTheTeam/MeetTheTeam";
 const Homepage = () => {
   return (
     <>
+      <title>Flip on My Dime | Stress-Free Home Flipping & Selling Services</title>
+      <meta name="description" content="Let Flip on My Dime upgrade and sell your home for top dollar with no upfront cost. Stress-free renovations, valuable upgrades, and shared profits." />
+
       <div className="home-container">
         <HomeMainView/>
         <PageTransition transitionDirection="l2d"/>

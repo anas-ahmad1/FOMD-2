@@ -9,6 +9,8 @@ const Services = () => {
 
   return (
     <>
+      <title>Our Services | Flip on My Dime - Renovate & Sell for More</title>
+      <meta name="description" content="Discover our all-inclusive home flipping services. From upgrades to final sale, Flip on My Dime handles everything to help you sell for more." />
       <div className="services-main-container">
         <div className="services-heading">Our Services</div>
         <div className="services-text-secondary">Maximize your home's value with expert renovations, fast cash offers, and seamless flipping—all at no upfront cost. Whether you're selling, investing, or new to real estate, we handle everything to boost your profits.</div>

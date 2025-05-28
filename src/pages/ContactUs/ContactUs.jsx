@@ -72,6 +72,8 @@ const ContactUs = () => {
 
   return (
     <>
+      <title>Contact Us | Flip on My Dime - Start Your Home Renovation Journey</title>
+      <meta name="description" content="Get in touch with Flip on My Dime to discuss how we can flip your home for maximum profit. Stress-free renovations and expert guidance await!" />
       <div className="contact-us-container">
         <div className="contact-us-left-container">
           <div className="contact-us-heading">Contact Us</div>

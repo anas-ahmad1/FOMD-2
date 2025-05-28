@@ -10,6 +10,7 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
   
@@ -72,8 +73,37 @@ const ContactUs = () => {
 
   return (
     <>
+    <Helmet>
       <title>Contact Us | Flip on My Dime - Start Your Home Renovation Journey</title>
       <meta name="description" content="Get in touch with Flip on My Dime to discuss how we can flip your home for maximum profit. Stress-free renovations and expert guidance await!" />
+      <script type="application/ld+json">
+        {`
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Flip on my dime",
+            "url": "https://fliponmydime.com/",
+            "logo": "https://fliponmydime.com/logo.jpeg",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-713-497-6931",
+              "contactType": "Customer Support",
+              "areaServed": "US",
+              "availableLanguage": ["English"]
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Clear Lake City",
+              "addressRegion": "TX",
+              "addressCountry": "US"
+            }
+          }
+        `}
+      </script>
+
+    </Helmet>
+      
       <div className="contact-us-container">
         <div className="contact-us-left-container">
           <div className="contact-us-heading">Contact Us</div>

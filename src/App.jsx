@@ -14,6 +14,7 @@ import Gallery from "./pages/Gallery/Gallery.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
 import Services from "./pages/Services/Services.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer/Footer.jsx"
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/blog-1" element={<Blog1 />} />
             <Route path="/blog-2" element={<Blog2 />} />
           </Routes>
+          <Footer />
         </Router>
       </div>
     </>

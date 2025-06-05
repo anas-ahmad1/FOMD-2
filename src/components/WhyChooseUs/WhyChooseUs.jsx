@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
           <div className="reason-box">
             <div className="box-header">Experience</div>
             <div className="reason-img-container">
-              <img src={experience}></img>
+              <img src={experience} alt="Illustration representing real estate experience and expertise" />
             </div>
             <div className="reason-text">
               With over 15 years of experience in the real estate industry, our
@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
           <div className="reason-box">
             <div className="box-header">Personalized Service</div>
             <div className="reason-img-container">
-              <img src={personalized}></img>
+              <img src={personalized} alt="Illustration representing personalized service and client focus" />
             </div>
             <div className="reason-text">
             At fliponmydime, we believe in providing our clients with personalized attention and exceptional service. We take the time to understand your unique needs and work tirelessly to help you achieve your goals. 
@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
           <div className="reason-box">
             <div className="box-header">Extensive Network</div>
             <div className="reason-img-container">
-              <img src={network}></img>
+              <img src={network} alt="Illustration representing an extensive network of industry professionals" />
             </div>
             <div className="reason-text">
             We have an extensive network of industry professionals, including lenders, inspectors, and contractors, to help you every step of the way. We work with the best in the business to ensure that you get the best possible service.

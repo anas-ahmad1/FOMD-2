@@ -112,15 +112,15 @@ const ContactUs = () => {
             forward to hearing from you!
           </div>
           <div className="contact-us-detail-row">
-            <img src={Email} />
+            <img src={Email} alt="Email icon" />
             <div className="contact-us-detail">Neal@fliponmydime.com</div>
           </div>
           <div className="contact-us-detail-row">
-            <img src={Location} />
+            <img src={Location} alt="Location pin icon" />
             <div className="contact-us-detail">Clear Lake City Houston</div>
           </div>
           <div className="contact-us-detail-row">
-            <img src={Mobile} />
+            <img src={Mobile} alt="Phone icon" />
             <div className="contact-us-detail">713 497 6931</div>
           </div>
         </div>
@@ -165,7 +165,7 @@ const ContactUs = () => {
               </div>
               <div className="form-row">
                 <div className="input-container">
-                  <img src={FormEmail} />
+                  <img src={FormEmail} alt="Envelope icon representing email field" />
                   <input
                     type="email"
                     id="email"
@@ -181,7 +181,7 @@ const ContactUs = () => {
               </div>
               <div className="form-row">
                 <div className="input-container">
-                  <img src={FormMobile} />
+                  <img src={FormMobile} alt="Phone icon representing mobile field" />
                   <input
                     type="tel"
                     id="phone"

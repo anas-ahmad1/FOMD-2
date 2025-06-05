@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./MeetTheTeam.css";
-import experience from "../../assets/experience.png";
-import personalized from "../../assets/personalized.png";
-import network from "../../assets/network.png";
 import teamMember1 from "../../assets/teamMember1.jpg";
 import teamMember2 from "../../assets/teamMember2.jpg";
 
@@ -23,7 +20,7 @@ const MeetTheTeam = () => {
       <div className="view-five-main-container">
         <div className="team-members-container">
           <div className="team-member">
-            <img src={teamMember1}></img>
+            <img src={teamMember1} alt="Neal - Founder of Flip on My Dime" />
             <div className="team-member-name">Neal</div>
             <div className="team-member-designation">Founder</div>
             <div className="team-member-detail">
@@ -32,7 +29,7 @@ const MeetTheTeam = () => {
             </div>
           </div>
           <div className="team-member">
-            <img src={teamMember2}></img>
+            <img src={teamMember2} alt="Puja Birak - Realtor at Flip on My Dime" />
             <div className="team-member-name">Puja Birak</div>
             <div className="team-member-designation">Realtor</div>
             <div className="team-member-detail">

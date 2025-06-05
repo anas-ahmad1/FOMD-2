@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./WhatWeDo.css";
-import image1 from "../../assets/carousalImg1.jpeg";
-import image2 from "../../assets/carousalImg2.jpeg";
-import before from "../../assets/before.png";
-import after from "../../assets/after.png";
+import whatWeDo1 from "../../assets/what-we-do-1.jpg";
+import whatWeDo2 from "../../assets/what-we-do-2.jpg";
 
 const WhatWeDo = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -33,22 +31,20 @@ const WhatWeDo = () => {
           {isMobile ? (
             <>
               <div className="view-two-img">
-                <img src={before} alt="Image before renovation" />
-                <span className="image-label">BEFORE</span>
+                <img src={whatWeDo1} alt="Image before renovation" />
               </div>
               <div className="view-two-img">
-                <img src={after} alt="Image after renovation" />
-                <span className="image-label">AFTER</span>
+                <img src={whatWeDo2} alt="Image after renovation" />
               </div>
             </> ) : (
                 <>
                 <div className="view-two-img">
-                  <img src={image1} alt="Image before renovation" />
-                  <span className="image-label">BEFORE</span>
+                  <img src={whatWeDo1} alt="Image before renovation" />
+
                 </div>
                 <div className="view-two-img">
-                  <img src={image2} alt="Image after renovation" />
-                  <span className="image-label">AFTER</span>
+                  <img src={whatWeDo2} alt="Image after renovation" />
+
                 </div>
               </>
             )}

@@ -38,10 +38,10 @@ const ContactUs = () => {
 
     emailjs
       .send(
-        "service_f6hifl4",
-        "template_tz6ppw9",
+        "service_4yqxnak",
+        "template_2pttyok",
         formData,
-        "pHLOvq98OT9IEH6t3"
+        "EvhYKixT-IsRt0PbT"
       )
       .then(
         (response) => {

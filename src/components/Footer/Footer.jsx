@@ -17,16 +17,16 @@ const Footer = () => {
           </div>
           <div className="footer-row">
             <div className="footer-icon-container">
-              <img src={facebook}></img>
+              <img src={facebook} alt="Facebook icon"/>
             </div>
             <div className="footer-icon-container">
-                <img src={instagram}/>
+                <img src={instagram} alt="Instagram icon"/>
             </div>
             <div className="footer-icon-container">
-              <img src={twitter}></img>
+              <img src={twitter} alt="Twitter icon"/>
             </div>
             <div className="footer-icon-container">
-              <img src={linkedin}></img>
+              <img src={linkedin} alt="Linkedin icon"/>
             </div>
           </div>
         </div>

@@ -33,21 +33,21 @@ const WhatWeDo = () => {
           {isMobile ? (
             <>
               <div className="view-two-img">
-                <img src={before} alt="" />
+                <img src={before} alt="Image before renovation" />
                 <span className="image-label">BEFORE</span>
               </div>
               <div className="view-two-img">
-                <img src={after} alt="" />
+                <img src={after} alt="Image after renovation" />
                 <span className="image-label">AFTER</span>
               </div>
             </> ) : (
                 <>
                 <div className="view-two-img">
-                  <img src={image1} alt="" />
+                  <img src={image1} alt="Image before renovation" />
                   <span className="image-label">BEFORE</span>
                 </div>
                 <div className="view-two-img">
-                  <img src={image2} alt="" />
+                  <img src={image2} alt="Image after renovation" />
                   <span className="image-label">AFTER</span>
                 </div>
               </>

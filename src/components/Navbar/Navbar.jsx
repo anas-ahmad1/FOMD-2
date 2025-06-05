@@ -50,12 +50,6 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <div className={`nav-item ${location.pathname === "/blogs" ? "active" : ""}`}>
-              <Link className="nav-link" to="/blogs" onClick={closeMenu}>
-                Blogs
-              </Link>
-            </div>
-
             <div className={`nav-item nav-contact ${location.pathname === "/contact-us" ? "contact-active" : ""}`}>
               <Link className="nav-link" to="/contact-us" onClick={closeMenu}>
                 Contact Us

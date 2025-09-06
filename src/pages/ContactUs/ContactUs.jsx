@@ -9,6 +9,8 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
   
@@ -36,10 +38,10 @@ const ContactUs = () => {
 
     emailjs
       .send(
-        "service_f6hifl4",
-        "template_tz6ppw9",
+        "service_4yqxnak",
+        "template_2pttyok",
         formData,
-        "pHLOvq98OT9IEH6t3"
+        "EvhYKixT-IsRt0PbT"
       )
       .then(
         (response) => {
@@ -71,6 +73,37 @@ const ContactUs = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Contact Us | Flip on My Dime - Start Your Home Renovation Journey</title>
+      <meta name="description" content="Get in touch with Flip on My Dime to discuss how we can flip your home for maximum profit. Stress-free renovations and expert guidance await!" />
+      <script type="application/ld+json">
+        {`
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Flip on my dime",
+            "url": "https://fliponmydime.com/",
+            "logo": "https://fliponmydime.com/logo.jpeg",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-713-497-6931",
+              "contactType": "Customer Support",
+              "areaServed": "US",
+              "availableLanguage": ["English"]
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Clear Lake City",
+              "addressRegion": "TX",
+              "addressCountry": "US"
+            }
+          }
+        `}
+      </script>
+
+    </Helmet>
+      
       <div className="contact-us-container">
         <div className="contact-us-left-container">
           <div className="contact-us-heading">Contact Us</div>
@@ -79,15 +112,15 @@ const ContactUs = () => {
             forward to hearing from you!
           </div>
           <div className="contact-us-detail-row">
-            <img src={Email} />
+            <img src={Email} alt="Email icon" />
             <div className="contact-us-detail">Neal@fliponmydime.com</div>
           </div>
           <div className="contact-us-detail-row">
-            <img src={Location} />
+            <img src={Location} alt="Location pin icon" />
             <div className="contact-us-detail">Clear Lake City Houston</div>
           </div>
           <div className="contact-us-detail-row">
-            <img src={Mobile} />
+            <img src={Mobile} alt="Phone icon" />
             <div className="contact-us-detail">713 497 6931</div>
           </div>
         </div>
@@ -132,7 +165,7 @@ const ContactUs = () => {
               </div>
               <div className="form-row">
                 <div className="input-container">
-                  <img src={FormEmail} />
+                  <img src={FormEmail} alt="Envelope icon representing email field" />
                   <input
                     type="email"
                     id="email"
@@ -148,7 +181,7 @@ const ContactUs = () => {
               </div>
               <div className="form-row">
                 <div className="input-container">
-                  <img src={FormMobile} />
+                  <img src={FormMobile} alt="Phone icon representing mobile field" />
                   <input
                     type="tel"
                     id="phone"

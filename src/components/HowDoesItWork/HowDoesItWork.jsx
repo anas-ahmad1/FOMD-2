@@ -14,7 +14,7 @@ const HowDoesItWork = () => {
             <div className="number-container">
               <div className="step-number-one">1</div>
               <div className="inner-img-container">
-                <img src={step1}></img>
+                <img src={step1} alt="Illustration of home tour and valuation process" />
               </div>
             </div>
             <div className="text-container">
@@ -25,13 +25,13 @@ const HowDoesItWork = () => {
               </div>
             </div>
             <div className="img-container">
-              <img src={step1}></img>
+              <img src={step1} alt="Illustration of home tour and valuation process" />
             </div>
           </div>
 
           <div className="step-two">
             <div className="img-container">
-              <img src={step2}></img>
+              <img src={step2} alt="Illustration of agreement process" />
             </div>
             <div className="text-container">
               <div className="step-text">
@@ -42,7 +42,7 @@ const HowDoesItWork = () => {
             <div className="number-container-right">
               <div className="step-number-two">2</div>
               <div className="inner-img-container">
-                <img src={step2}></img>
+                <img src={step2} alt="Illustration of agreement process" />
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ const HowDoesItWork = () => {
             <div className="number-container">
               <div className="step-number-three">3</div>
               <div className="inner-img-container">
-                <img src={step3}></img>
+                <img src={step3} alt="Illustration of home renovation process" />
               </div>
             </div>
             <div className="text-container">
@@ -62,7 +62,7 @@ const HowDoesItWork = () => {
               </div>
             </div>
             <div className="img-container">
-              <img src={step3}></img>
+              <img src={step3} alt="Illustration of home renovation process" />
             </div>
           </div>
         </div>

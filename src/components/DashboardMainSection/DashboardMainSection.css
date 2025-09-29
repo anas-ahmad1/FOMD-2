@@ -1,0 +1,137 @@
+.dashboard-main-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: absolute;       /* ensures text is on top of image */
+  bottom: 0;                /* stick to bottom of section */
+  left: 0;
+  width: 100%;
+  height: 50%;             /* full height for flex control */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;    /* bottom-align the two containers */
+  padding: 0 60px;
+  color: white;
+}
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* bottom aligned */
+  text-align: left;
+}
+
+.content-right {
+    height: 100%;
+    width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+
+.text-left h1 {
+  font-family: 'Cormorant Upright', serif;
+  font-weight: 600;
+  line-height: 200px;
+  text-align: left;
+  color: white;
+}
+
+.text-left .flip,
+.text-left .dime {
+  font-size: 250px;
+}
+
+.text-left .onmy {
+  font-size: 128px;
+}
+
+
+.boost-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  line-height: 80px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.visit-btn {
+  padding: 12px 30px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.visit-btn:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    height: 70%;
+  }
+
+  .text-left h1 {
+  line-height: 80px;
+  text-align: center
+}
+
+.text-left .flip,
+.text-left .dime {
+  font-size: 90px;
+}
+
+.text-left .onmy {
+  font-size: 50px;
+}
+
+  .boost-text {
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .text-right {
+    align-items: center;
+  }
+
+  .visit-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

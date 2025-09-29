@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Homepage.css";
 import HomeMainView from "../../components/HomeMainView/HomeMainView";
+import DashboardMainSection from "../../components/DashboardMainSection/DashboardMainSection";
 import WhatWeDo from "../../components/WhatWeDo/WhatWeDo";
 import HowDoesItWork from "../../components/HowDoesItWork/HowDoesItWork";
 import PageTransition from "../../components/PageTransition/PageTransition";
@@ -47,6 +48,7 @@ const Homepage = () => {
     </Helmet>
       
       <div className="home-container">
+        <DashboardMainSection/>
         <HomeMainView/>
         <PageTransition transitionDirection="l2d"/>
         <WhatWeDo/>

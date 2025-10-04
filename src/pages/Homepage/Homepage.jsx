@@ -9,6 +9,7 @@ import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import MeetTheTeam from "../../components/MeetTheTeam/MeetTheTeam";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import ExtraDetailSection from "../../components/ExtraDetailSection/ExtraDetailSection";
+import LuxurySection from "../../components/LuxurySection/LuxurySection";
 import { Helmet } from "react-helmet";
 
 const Homepage = () => {
@@ -55,14 +56,15 @@ const Homepage = () => {
         <WhatWeDo/>
         <SectionHeader title="THE ONLY TEAM WHO INVEST ALONGSIDE THEIR CLIENTS" />
         <ExtraDetailSection/>
-        <HomeMainView/>
+        <LuxurySection/>
+        {/* <HomeMainView/>
         <PageTransition transitionDirection="l2d"/>
         <PageTransition transitionDirection="d2l"/>
         <HowDoesItWork/>
         <PageTransition transitionDirection="l2d"/>
         <WhyChooseUs/>
         <PageTransition transitionDirection="d2l"/>
-        <MeetTheTeam/>
+        <MeetTheTeam/> */}
       </div>
     </>
   );

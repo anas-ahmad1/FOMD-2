@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/logo.jpeg";
+import logo2 from "../../assets/logo-white.svg";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
@@ -36,7 +37,7 @@ const Navbar = () => {
         <nav className="nav-container">
           <div className="nav-container-left">
             <Link to="/" onClick={closeMenu}>
-              <img src={logo} className="nav-logo" alt="Flip on my dime Logo" />
+              <img src={logo2} className="nav-logo" alt="Flip on my dime Logo" />
             </Link>
           </div>
 

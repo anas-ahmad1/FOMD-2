@@ -1,17 +1,14 @@
-.dashboard-main-section {
+.hero-video-container {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
-.bg-image {
+.hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .overlay {
@@ -21,117 +18,57 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
 
-.content {
-  position: absolute;       /* ensures text is on top of image */
-  bottom: 0;                /* stick to bottom of section */
+.hero-content {
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 50%;             /* full height for flex control */
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;    /* bottom-align the two containers */
-  padding: 0 60px;
-  color: white;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
 }
 
-.content-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* bottom aligned */
-  text-align: left;
-}
-
-.content-right {
-    height: 100%;
-    width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; 
-}
-
-
-.text-left h1 {
-  font-family: 'Cormorant Upright', serif;
-  font-weight: 600;
-  line-height: 200px;
-  text-align: left;
-  color: white;
-}
-
-.text-left .flip,
-.text-left .dime {
-  font-size: 250px;
-}
-
-.text-left .onmy {
-  font-size: 128px;
-}
-
-
-.boost-text {
-  font-family: "Poppins", sans-serif;
-  font-size: 40px;
-  line-height: 80px;
+.hero-content h1 {
+  font-family: 'Montserrat';
+  font-size: 3rem;
+  font-weight: 400;
+  max-width: 600px;
   margin-bottom: 20px;
-  text-align: left;
+  margin-top: 50px;
+  line-height: 1.4;
 }
 
-.visit-btn {
-  padding: 12px 30px;
-  background-color: white;
-  color: black;
+.hero-btn {
+  background: white ;
+  color: #1E2020;
   border: none;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-.visit-btn:hover {
-  background-color: #f1f1f1;
+.hero-btn:hover {
+  background: #b5b9b9;
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    height: 70%;
+  .hero-content h1 {
+    font-size: 2rem;
+    max-width: 80%;
   }
-
-  .text-left h1 {
-  line-height: 80px;
-  text-align: center
-}
-
-.text-left .flip,
-.text-left .dime {
-  font-size: 90px;
-}
-
-.text-left .onmy {
-  font-size: 50px;
-}
-
-  .boost-text {
-    font-size: 20px;
-    line-height: 32px;
-    text-align: center;
-  }
-
-  .text-right {
-    align-items: center;
-  }
-
-  .visit-btn {
-    font-size: 16px;
-    padding: 10px 20px;
+  .hero-btn {
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 }

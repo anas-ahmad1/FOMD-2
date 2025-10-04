@@ -51,9 +51,9 @@ const Homepage = () => {
       <div className="home-container">
         <DashboardMainSection/>
         <SectionHeader title="What we do" />
+        <WhatWeDo/>
         <HomeMainView/>
         <PageTransition transitionDirection="l2d"/>
-        <WhatWeDo/>
         <PageTransition transitionDirection="d2l"/>
         <HowDoesItWork/>
         <PageTransition transitionDirection="l2d"/>

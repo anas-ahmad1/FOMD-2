@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../assets/logo.jpeg";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
@@ -6,6 +6,21 @@ import "./Navbar.css";
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -17,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="main-container-nav">
+      <div className={`main-container-nav ${scrolled ? "scrolled" : ""}`}>
         <nav className="nav-container">
           <div className="nav-container-left">
             <Link to="/" onClick={closeMenu}>
@@ -40,19 +55,19 @@ const Navbar = () => {
 
             <div className={`nav-item ${location.pathname === "/gallery" ? "active" : ""}`}>
               <Link className="nav-link" to="/gallery" onClick={closeMenu}>
-                Gallery
+                Free Home Evaluation
               </Link>
             </div>
 
             <div className={`nav-item ${location.pathname === "/services" ? "active" : ""}`}>
               <Link className="nav-link" to="/services" onClick={closeMenu}>
-                Services
+                Fair Cash Offer
               </Link>
             </div>
 
-            <div className={`nav-item nav-contact ${location.pathname === "/contact-us" ? "contact-active" : ""}`}>
+            <div className={`nav-item ${location.pathname === "/contact-us" ? "active" : ""}`}>
               <Link className="nav-link" to="/contact-us" onClick={closeMenu}>
-                Contact Us
+                About Us
               </Link>
             </div>
           </div>

@@ -8,6 +8,7 @@ import PageTransition from "../../components/PageTransition/PageTransition";
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import MeetTheTeam from "../../components/MeetTheTeam/MeetTheTeam";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
+import ExtraDetailSection from "../../components/ExtraDetailSection/ExtraDetailSection";
 import { Helmet } from "react-helmet";
 
 const Homepage = () => {
@@ -52,6 +53,8 @@ const Homepage = () => {
         <DashboardMainSection/>
         <SectionHeader title="What we do" />
         <WhatWeDo/>
+        <SectionHeader title="THE ONLY TEAM WHO INVEST ALONGSIDE THEIR CLIENTS" />
+        <ExtraDetailSection/>
         <HomeMainView/>
         <PageTransition transitionDirection="l2d"/>
         <PageTransition transitionDirection="d2l"/>

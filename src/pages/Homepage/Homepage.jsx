@@ -7,6 +7,7 @@ import HowDoesItWork from "../../components/HowDoesItWork/HowDoesItWork";
 import PageTransition from "../../components/PageTransition/PageTransition";
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import MeetTheTeam from "../../components/MeetTheTeam/MeetTheTeam";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import { Helmet } from "react-helmet";
 
 const Homepage = () => {
@@ -49,6 +50,7 @@ const Homepage = () => {
       
       <div className="home-container">
         <DashboardMainSection/>
+        <SectionHeader title="What we do" />
         <HomeMainView/>
         <PageTransition transitionDirection="l2d"/>
         <WhatWeDo/>

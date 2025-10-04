@@ -8,20 +8,20 @@
 
 .footer-inr-container {
   width: 100%;
-  height: 40vh;
+  height: auto;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #001F3F;
+  background-color: #1E2020;
+  padding: 2rem 0rem;
 }
 
 .footer-row {
   display: flex;
   flex-direction: row;
-  margin-bottom: 1rem;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .footer-text {
@@ -31,17 +31,18 @@
 .footer-icon-container {
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: #141515;
   width: 3rem;
   height: 3rem;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
   cursor: pointer;
+  margin-bottom: 2rem;
 }
 
 .footer-icon-container img {
-  width: 2rem;
-  height: 2rem;
+  width: 1rem;
+  height: 1rem;
 }
 

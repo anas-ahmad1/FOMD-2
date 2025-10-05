@@ -64,8 +64,10 @@ const Homepage = () => {
         <SectionHeader title="THE ONLY TEAM WHO INVEST ALONGSIDE THEIR CLIENTS" />
         <ExtraDetailSection />
         <LuxurySection />
-        <OurTeam />
         <Portfolio />
+        <SectionHeader title="YOUR PARTNERS IN REAL ESTATE" />
+        <OurTeam />
+        <SectionHeader title="TESTIMONIALS" />
         <Testimonial />
         {/* <HomeMainView/>
         <PageTransition transitionDirection="l2d"/>

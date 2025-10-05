@@ -17,7 +17,7 @@ const Portfolio = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "15%",
+    centerPadding: "30%",
     focusOnSelect: true,
     arrows: false,
     swipeToSlide: true,
@@ -25,20 +25,6 @@ const Portfolio = () => {
     autoplaySpeed: 3000,
     cssEase: "ease-in-out",
     responsive: [
-      {
-        breakpoint: 1536,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "25%",
-        },
-      },
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "20%",
-        },
-      },
       {
         breakpoint: 768,
         settings: {
@@ -54,12 +40,12 @@ const Portfolio = () => {
     <div
       className="portfolio-carousel"
       style={{
-        backgroundColor: "#1a1a1a",
+        backgroundColor: "#141515",
         minHeight: "90vh",
-        padding: "40px 10px",
+        padding: "40px 0px",
       }}
     >
-      <h1 className="featured-title">FEATURED PORTFOLIO</h1>
+      <h1 className="featured-title px-3">FEATURED PORTFOLIO</h1>
 
       <style>{`
         .featured-title {
@@ -105,7 +91,6 @@ const Portfolio = () => {
         }
 
         .portfolio-carousel .slick-slide {
-          padding: 0 12rem;
           transition: all 0.3s ease;
           opacity: 0.5;
           transform: scale(0.85) translateY(60px);
@@ -127,7 +112,6 @@ const Portfolio = () => {
           width: 100%;
         }
 
-
         .portfolio-carousel .image-container img {
           position: absolute;
           top: 0;
@@ -141,63 +125,14 @@ const Portfolio = () => {
           bottom: -50px;
         }
 
-        .portfolio-carousel .slick-dots li button:before {
-          font-size: 12px;
-          color: #ffffff;
-          opacity: 0.5;
-        }
-
-        .portfolio-carousel .slick-dots li.slick-active button:before {
-          opacity: 1;
-          color: #ffffff;
-        }
-
-        // .portfolio-carousel .image-container {
-        //   position: relative;
-        //   width: 100%;
-        //   padding-bottom: 150%; /* 2:3 aspect ratio (height = 1.5x width) */
-        //   overflow: hidden;
-        // }
-
         .portfolio-carousel .image-container {
           position: relative;
-          height: 70vh; /* Set height first */
-          width: calc(70vh * 2 / 3); /* Calculate width based on height (2:3 ratio) */
-          margin: 0 auto; /* Center horizontally */
-          max-width: 100%; /* Prevent overflow on small screens */
+          width: 100%;
+          aspect-ratio: 2 / 3;
           overflow: hidden;
+          margin: 0 auto;
         }
-
-        /* Gradually reduce padding for smaller screens */
-        @media (max-width: 1536px) {
-          .portfolio-carousel .slick-slide {
-            padding: 0;
-          }
-        }
-
-        @media (max-width: 1280px) {
-          .portfolio-carousel .image-container {
-            position: relative;
-            height: 60vh; /* Set height first */
-            width: calc(60vh * 2 / 3); /* Calculate width based on height (2:3 ratio) */
-            margin: 0 auto; /* Center horizontally */
-            max-width: 100%; /* Prevent overflow on small screens */
-            overflow: hidden;
-          }
-        }
-
-        // @media (max-width: 1024px) {
-        //   .portfolio-carousel .slick-slide {
-        //     padding: 0 4rem;
-        //   }
-        // }
-
-        // @media (max-width: 900px) {
-        //   .portfolio-carousel .slick-slide {
-        //     padding: 0 2rem;
-        //   }
-        }
-
+        
         /* Mobile styles */
         @media (max-width: 768px) {
           .portfolio-carousel .slick-slide {
@@ -212,35 +147,9 @@ const Portfolio = () => {
           }
 
           .portfolio-carousel .image-container {
-            width: 500px;
-            max-height: 750px; /* 500px * 1.5 = 750px */
-            padding-bottom: 0; /* Remove percentage-based height */
-            height: 750px; /* Fixed height */
+            width: 90vw;
             margin: 0 auto;
-            
           }
-        }
-
-        /* Allow images to scale down on very small screens */
-        @media (max-width: 500px) {
-          .portfolio-carousel .image-container {
-            max-width: 100%;
-            max-height: none;
-            height: auto;
-            padding-bottom: 150%; /* Restore ratio-based sizing */
-          }
-        }
-
-        /* Ensure proper spacing on larger screens */
-        @media (min-width: 769px) {
-          .portfolio-carousel .slick-list {
-            overflow: visible !important;
-          }
-          
-          .portfolio-carousel .slick-track {
-            display: flex !important;
-            align-items: flex-end;
-          }   
         }
       `}</style>
 

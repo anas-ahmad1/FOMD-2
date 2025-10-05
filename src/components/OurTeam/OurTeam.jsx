@@ -46,14 +46,6 @@ const OurTeam = () => {
 
   return (
     <>
-      <section className="bg-light py-5 py-lg-6">
-        <div className="container px-4 px-lg-5">
-          <h1 className="text-center fw-light letter-spacing mb-0 display-5 display-lg-4">
-            YOUR PARTNERS IN REAL ESTATE
-          </h1>
-        </div>
-      </section>
-
       <section className="d-flex align-items-center bg-custom-dark text-white py-5 py-lg-6 min-vh-75">
         <div className="container py-4 py-lg-5 px-4 px-lg-5 h-100">
           <div className="row g-5 gx-lg-6 gy-lg-6 h-100">

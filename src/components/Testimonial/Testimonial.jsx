@@ -96,126 +96,203 @@ const Testimonial = () => {
 
   return (
     <div
-      className="testimonial-carousel py-5"
+      className="testimonial-carousel"
       style={{
-        background: "#1a1a1a",
+        background: "#141515",
+        margin: "8rem 0",
       }}
     >
+      <div
+        className="testimonial-carousel-header px-0 px-md-5 mb-5"
+        style={{
+          maxWidth: "1200px",
+          marginBottom: "60px",
+        }}
+      >
+        <h2
+          style={{
+            color: "#ffffff",
+            fontSize: "3.5rem",
+            fontWeight: "400",
+            lineHeight: "1.2",
+            marginBottom: "20px",
+            letterSpacing: "-0.02em",
+          }}
+        >
+          Don't take our word for it,
+          <br />
+          see what our clients say
+        </h2>
+        <p
+          style={{
+            color: "#ffffff",
+            fontSize: "1.1rem",
+            lineHeight: "1.6",
+            maxWidth: "700px",
+          }}
+        >
+          Real stories from clients who turned to us for guidance,
+          <br />
+          and left with results beyond expectations.
+        </p>
+      </div>
+
       {/* CSS overrides */}
-      <style>{`
-  /* Hide arrows on mobile */
-  @media (max-width: 991px) {
-    .testimonial-carousel .carousel-controls-desktop {
-      display: none !important;
-    }
-  }
+      <style>
+        {`
+        /* Heading alignment - center on mobile, left on desktop */
+        .testimonial-carousel .testimonial-carousel-header {
+          text-align: center !important;
+        }
 
-  /* === Slick structure fixes === */
-  .testimonial-carousel .slick-slider {
-    margin: 0;
-    max-width: 100%;
-  }
+        .testimonial-carousel .testimonial-carousel-header p {
+          margin: 0 auto !important;
+        }
 
-  .testimonial-carousel .slick-list {
-    overflow: hidden !important;
-    padding-right: 120px;
-  }
+        @media (min-width: 768px) {
+          .testimonial-carousel .testimonial-carousel-header {
+            text-align: left !important;
+          }
+          .testimonial-carousel .testimonial-carousel-header p {
+            margin: 0 !important;
+          }
+        }
 
-  @media (min-width: 992px) {
-    .testimonial-carousel .slick-list {
-      overflow: visible;
-    }
-  }
+        /* Responsive font sizes for mobile */
+        @media (max-width: 767px) {
+          .testimonial-carousel .testimonial-carousel-header h2 {
+            font-size: 2.5rem !important;
+          }
+          
+          .testimonial-carousel .testimonial-carousel-header p {
+            font-size: 1rem !important;
+          }
+        }
 
-  /* === Equal height core logic === */
-  .testimonial-carousel .slick-track {
-    display: flex !important;
-    align-items: stretch !important;
-  }
+        /* Responsive font sizes for mobile */
+        @media (max-width: 500px) {
+          .testimonial-carousel .testimonial-carousel-header h2 {
+            font-size: 2rem !important;
+          }
+          
+          .testimonial-carousel .testimonial-carousel-header p {
+            font-size: 0.9rem !important;
+          }
+        }
 
-  .testimonial-carousel .slick-slide {
-    display: flex !important;
-    height: auto !important;
-  }
+        /* Hide arrows on mobile */
+        @media (max-width: 991px) {
+          .testimonial-carousel .carousel-controls-desktop {
+            display: none !important;
+          }
+        }
 
-  /* This wrapper inside each slide must also flex */
-  .testimonial-carousel .slick-slide > div {
-    display: flex !important;
-    flex: 1 1 auto !important;
-    height: 100% !important;
-    padding: 0 20px;
-  }
+        /* === Slick structure fixes === */
+        .testimonial-carousel .slick-slider {
+          margin: 0;
+          max-width: 100%;
+        }
 
-  /* === Testimonial card === */
-  .testimonial-carousel .testimonial-card {
-    background-color: #1e2020 !important;
-    border-radius: 12px;
-    padding: 40px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
+        .testimonial-carousel .slick-list {
+          overflow: hidden !important;
+          padding-right: 120px;
+        }
 
-  .testimonial-carousel .testimonial-card:hover {
-    transform: translateY(-5px);
-  }
+        @media (min-width: 992px) {
+          .testimonial-carousel .slick-list {
+            overflow: visible;
+          }
+        }
 
-  /* === Card content === */
-  .testimonial-carousel .testimonial-card .star-rating {
-    color: #fbbf24 !important;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
+        /* === Equal height core logic === */
+        .testimonial-carousel .slick-track {
+          display: flex !important;
+          align-items: stretch !important;
+        }
 
-  .testimonial-carousel .testimonial-card p {
-    color: #ffffff !important;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    flex-grow: 1;
-  }
+        .testimonial-carousel .slick-slide {
+          display: flex !important;
+          height: auto !important;
+        }
 
-  .testimonial-carousel .testimonial-card .testimonial-name {
-    color: #ffffff !important;
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-  }
+        /* This wrapper inside each slide must also flex */
+        .testimonial-carousel .slick-slide > div {
+          display: flex !important;
+          flex: 1 1 auto !important;
+          height: 100% !important;
+          padding: 0 20px;
+        }
 
-  .testimonial-carousel .testimonial-card .testimonial-date {
-    color: #cfcfcf !important;
-    font-size: 0.9rem;
-  }
+        /* === Testimonial card === */
+        .testimonial-carousel .testimonial-card {
+          background-color: #1e2020 !important;
+          border-radius: 12px;
+          padding: 40px;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex-grow: 1;
+          transition: transform 0.3s ease;
+          cursor: pointer;
+        }
 
-  /* === Responsive adjustments === */
-  @media (max-width: 900px) {
-    .testimonial-carousel .slick-list {
-      padding-right: 60px;
-    }
-    .testimonial-carousel .testimonial-card {
-      padding: 30px;
-      min-height: 280px;
-    }
-    .testimonial-carousel .slick-slide > div {
-      padding: 0 10px;
-    }
-  }
+        .testimonial-carousel .testimonial-card:hover {
+          transform: translateY(-5px);
+        }
 
-  @media (max-width: 600px) {
-    .testimonial-carousel .slick-list {
-      padding-right: 40px;
-    }
-    .testimonial-carousel .testimonial-card {
-      padding: 25px;
-      min-height: 260px;
-    }
-  }
-`}</style>
+        /* === Card content === */
+        .testimonial-carousel .testimonial-card .star-rating {
+          color: #fbbf24 !important;
+          font-size: 1.5rem;
+          margin-bottom: 20px;
+        }
+
+        .testimonial-carousel .testimonial-card p {
+          color: #ffffff !important;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 30px;
+          flex-grow: 1;
+        }
+
+        .testimonial-carousel .testimonial-card .testimonial-name {
+          color: #ffffff !important;
+          font-weight: 600;
+          font-size: 1.1rem;
+          margin-bottom: 5px;
+        }
+
+        .testimonial-carousel .testimonial-card .testimonial-date {
+          color: #cfcfcf !important;
+          font-size: 0.9rem;
+        }
+
+        /* === Responsive adjustments === */
+        @media (max-width: 900px) {
+          .testimonial-carousel .slick-list {
+            padding-right: 60px;
+          }
+          .testimonial-carousel .testimonial-card {
+            padding: 30px;
+            min-height: 280px;
+          }
+          .testimonial-carousel .slick-slide > div {
+            padding: 0 10px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .testimonial-carousel .slick-list {
+            padding-right: 40px;
+          }
+          .testimonial-carousel .testimonial-card {
+            padding: 25px;
+            min-height: 260px;
+          }
+        }`}
+      </style>
 
       <div style={{ position: "relative" }}>
         <Slider ref={sliderRef} {...settings}>

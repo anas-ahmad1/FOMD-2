@@ -45,6 +45,7 @@ const Portfolio = () => {
     focusOnSelect: true,
     arrows: false,
     swipeToSlide: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "ease-in-out",
     responsive: [
@@ -67,7 +68,12 @@ const Portfolio = () => {
         padding: "40px 0px",
       }}
     >
-      <h1 className="featured-title px-3">FEATURED PORTFOLIO</h1>
+      <h1
+        className="featured-title px-3"
+        style={{ fontFamily: "Quicksand, sans-serif", letterSpacing: "0.1em" }}
+      >
+        FEATURED PORTFOLIO
+      </h1>
 
       <style>{`
         .featured-title {

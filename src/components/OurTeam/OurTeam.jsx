@@ -58,13 +58,28 @@ const OurTeam = () => {
                     className="rounded-circle flex-shrink-0 partner-img"
                   />
                   <div className="flex-grow-1">
-                    <h3 className="h4 fw-normal mb-1 partner-title">
+                    <h3
+                      className="h4 fw-normal mb-1 partner-title"
+                      style={{
+                        fontFamily: "Poppins",
+                      }}
+                    >
                       {partner.name}
                     </h3>
-                    <p className="text-secondary small mb-2 pb-2 border-bottom border-secondary partner-content">
+                    <p
+                      className="text-secondary small mb-2 pb-2 border-bottom border-secondary partner-content"
+                      style={{
+                        fontFamily: "Quicksand, sans-serif",
+                      }}
+                    >
                       {partner.title}
                     </p>
-                    <p className="small text-light mb-0 partner-content">
+                    <p
+                      className="small text-light mb-0 partner-content"
+                      style={{
+                        fontFamily: "Quicksand, sans-serif",
+                      }}
+                    >
                       {partner.description}
                     </p>
                   </div>

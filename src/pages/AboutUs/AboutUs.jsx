@@ -39,7 +39,11 @@ const AboutUs = () => {
     <div className="container py-5">
       <h1
         className="text-center text-white display-5 fw-bold"
-        style={{ margin: "6rem 0" }}
+        style={{
+          margin: "6rem 0",
+          fontFamily: "Quicksand, sans-serif",
+          textTransform: "uppercase",
+        }}
       >
         About Our Team
       </h1>
@@ -62,13 +66,22 @@ const AboutUs = () => {
               />
             </div>
 
-            <div className="col-12 col-lg-8">
-              <h2 className="mb-4 text-white text-center text-lg-start">
+            <div className="col-12 col-lg-8 px-4 px-sm-2 px-md-0">
+              <h2
+                className="mb-4 text-white text-center text-lg-start"
+                style={{
+                  fontFamily: "Poppins",
+                }}
+              >
                 {member.name}
               </h2>
               <p
-                className="text-white text-start"
-                style={{ lineHeight: "1.8" }}
+                className="text-white"
+                style={{
+                  fontFamily: "Quicksand, sans-serif",
+                  lineHeight: "1.8",
+                  textAlign: "justify",
+                }}
               >
                 {member.description}
               </p>

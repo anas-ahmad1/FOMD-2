@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import Homepage from "./pages/Homepage/Homepage.jsx";
 import Gallery from "./pages/Gallery/Gallery.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
+import HomeEvaluation from "./pages/HomeEvaluation/HomeEvaluation.jsx";
+import CashOffer from "./pages/CashOffer/CashOffer.jsx";
 import Services from "./pages/Services/Services.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer.jsx";
@@ -22,6 +24,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/home-evaluation" element={<HomeEvaluation />} />
+            <Route path="/cash-offer" element={<CashOffer />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/services" element={<Services />} />
             <Route path="/about-us" element={<AboutUs />} />

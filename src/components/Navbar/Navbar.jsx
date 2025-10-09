@@ -66,27 +66,31 @@ const Navbar = () => {
 
             <div
               className={`nav-item ${
-                location.pathname === "/gallery" ? "active" : ""
+                location.pathname === "/home-evaluation" ? "active" : ""
               }`}
             >
-              <Link className="nav-link" to="/gallery" onClick={closeMenu}>
+              <Link
+                className="nav-link"
+                to="/home-evaluation"
+                onClick={closeMenu}
+              >
                 Free Home Evaluation
               </Link>
             </div>
 
             <div
               className={`nav-item ${
-                location.pathname === "/services" ? "active" : ""
+                location.pathname === "/cash-offer" ? "active" : ""
               }`}
             >
-              <Link className="nav-link" to="/services" onClick={closeMenu}>
+              <Link className="nav-link" to="/cash-offer" onClick={closeMenu}>
                 Fair Cash Offer
               </Link>
             </div>
 
             <div
               className={`nav-item ${
-                location.pathname === "/contact-us" ? "active" : ""
+                location.pathname === "/about-us" ? "active" : ""
               }`}
             >
               <Link className="nav-link" to="/about-us" onClick={closeMenu}>

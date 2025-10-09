@@ -10,11 +10,7 @@ const Footer = () => {
     <>
       <div className="footer-container">
         <div className="footer-inr-container">
-          <div className="footer-row">
-            <div className="footer-text">
-              &copy; 2025 Flip on My Dime | All rights Reserved
-            </div>
-          </div>
+          
           <div className="footer-row">
             <div className="footer-icon-container">
               <img src={facebook} alt="Facebook icon"/>
@@ -27,6 +23,11 @@ const Footer = () => {
             </div>
             <div className="footer-icon-container">
               <img src={linkedin} alt="Linkedin icon"/>
+            </div>
+          </div>
+          <div className="footer-row">
+            <div className="footer-text">
+              &copy; 2025 Flip on My Dime | All rights Reserved
             </div>
           </div>
         </div>

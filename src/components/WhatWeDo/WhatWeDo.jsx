@@ -1,57 +1,39 @@
 import React, { useState, useEffect } from "react";
 import "./WhatWeDo.css";
-import whatWeDo1 from "../../assets/what-we-do-1.jpg";
-import whatWeDo2 from "../../assets/what-we-do-2.jpg";
+import img from "../../assets/dashboard-bg-img.jpg";
+import imgMobile from "../../assets/dashboard-bg-img-mobile.jpg";
 
 const WhatWeDo = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth <= 768 : false
+  );
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+  const bg = isMobile ? imgMobile : img;
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const boxes = [
+    {
+      title: "Sell with Confidence",
+      text: "When you call Flip On My Dime, you’ll speak directly with Neal or Puja—no middlemen. We believe real estate should be personal, not transactional, so we provide one-on-one guidance every step of the way. Whether you’re selling, upgrading, or downsizing, we combine market expertise with genuine care to help you make the best decisions. Our fair, transparent compensation of 1.5–2% ensures you keep more of what’s yours.",
+    },
+    {
+      title: "Flip Your Home",
+      text: "We make upgrading and flipping simple—no upfront costs, no stress. Using our trusted network of skilled, low-cost contractors, we manage the entire process from start to finish. Our approach helps you unlock your home’s full potential and achieve the highest possible return while protecting your hard-earned equity.",
+    },
+    {
+      title: "Fair & Honest Cash Offer",
+      text: "By working with us, you deal directly with the buyer—no agents, no showings, no delays. This eliminates complications and allows us to move much faster. If you want a fair, straightforward offer and a smooth process, we’re here to make it happen.",
+    },
+  ];
 
   return (
-    <>
-      <div className="view-two-main-container">
-        <div className="what-we-do-container">
-          <div className="what-we-do-text-primary">What We Do</div>
-          <div className="what-we-do-text-secondary">
-            We are a boutique all inclusive realtor that not only helps you sell
-            your home, but take away every stressor from you in updating your
-            home, while adding value through valuable upgrades that are
-            currently hot in today market! Selling? Flip your home with no
-            money! Let me do all the work and we share the increased profits!!
-          </div>
-          <div className="view-two-img-container">
-          {isMobile ? (
-            <>
-              <div className="view-two-img">
-                <img src={whatWeDo1} alt="Image before renovation" />
-              </div>
-              <div className="view-two-img">
-                <img src={whatWeDo2} alt="Image after renovation" />
-              </div>
-            </> ) : (
-                <>
-                <div className="view-two-img">
-                  <img src={whatWeDo1} alt="Image before renovation" />
-
-                </div>
-                <div className="view-two-img">
-                  <img src={whatWeDo2} alt="Image after renovation" />
-
-                </div>
-              </>
-            )}
-          </div>
+    <div className="info-container" style={{ backgroundImage: `url(${bg})` }}>
+      {boxes.map((box, index) => (
+        <div key={index} className="info-box">
+          <h2 className="info-title">{box.title}</h2>
+          <p className="info-text">{box.text}</p>
         </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 

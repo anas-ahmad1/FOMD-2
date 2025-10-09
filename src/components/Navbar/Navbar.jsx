@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/logo.jpeg";
+import logo2 from "../../assets/logo-white.svg";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
@@ -36,7 +37,11 @@ const Navbar = () => {
         <nav className="nav-container">
           <div className="nav-container-left">
             <Link to="/" onClick={closeMenu}>
-              <img src={logo} className="nav-logo" alt="Flip on my dime Logo" />
+              <img
+                src={logo2}
+                className="nav-logo"
+                alt="Flip on my dime Logo"
+              />
             </Link>
           </div>
 
@@ -45,28 +50,50 @@ const Navbar = () => {
           </div>
 
           <div className={`nav-container-right ${isOpen ? "open" : ""}`}>
-            <div className="close-btn" onClick={toggleMenu}>&times;</div>
+            <div className="close-btn" onClick={toggleMenu}>
+              &times;
+            </div>
 
-            <div className={`nav-item ${location.pathname === "/" ? "active" : ""}`}>
+            <div
+              className={`nav-item ${
+                location.pathname === "/" ? "active" : ""
+              }`}
+            >
               <Link className="nav-link" to="/" onClick={closeMenu}>
                 Home
               </Link>
             </div>
 
-            <div className={`nav-item ${location.pathname === "/home-evaluation" ? "active" : ""}`}>
-              <Link className="nav-link" to="/home-evaluation" onClick={closeMenu}>
+            <div
+              className={`nav-item ${
+                location.pathname === "/home-evaluation" ? "active" : ""
+              }`}
+            >
+              <Link
+                className="nav-link"
+                to="/home-evaluation"
+                onClick={closeMenu}
+              >
                 Free Home Evaluation
               </Link>
             </div>
 
-            <div className={`nav-item ${location.pathname === "/cash-offer" ? "active" : ""}`}>
+            <div
+              className={`nav-item ${
+                location.pathname === "/cash-offer" ? "active" : ""
+              }`}
+            >
               <Link className="nav-link" to="/cash-offer" onClick={closeMenu}>
                 Fair Cash Offer
               </Link>
             </div>
 
-            <div className={`nav-item ${location.pathname === "/contact-us" ? "active" : ""}`}>
-              <Link className="nav-link" to="/contact-us" onClick={closeMenu}>
+            <div
+              className={`nav-item ${
+                location.pathname === "/about-us" ? "active" : ""
+              }`}
+            >
+              <Link className="nav-link" to="/about-us" onClick={closeMenu}>
                 About Us
               </Link>
             </div>

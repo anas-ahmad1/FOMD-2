@@ -1,4 +1,4 @@
-import "./Portfolio.css";
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
 
 const Portfolio = () => {
@@ -9,6 +9,30 @@ const Portfolio = () => {
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=533&h=800&fit=crop",
     "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=533&h=800&fit=crop",
   ];
+
+  const [maxImageWidth, setMaxImageWidth] = useState(null);
+
+  useEffect(() => {
+    const calculateMaxWidth = () => {
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+
+      if (vw > vh && vw > 768) {
+        const availableHeight = vh * 0.6;
+
+        const calculatedMaxWidth = availableHeight / (1.5 * 1.05);
+
+        setMaxImageWidth(calculatedMaxWidth);
+      } else {
+        setMaxImageWidth(null);
+      }
+    };
+
+    calculateMaxWidth();
+    window.addEventListener("resize", calculateMaxWidth);
+
+    return () => window.removeEventListener("resize", calculateMaxWidth);
+  }, []);
 
   const settings = {
     dots: true,
@@ -21,7 +45,6 @@ const Portfolio = () => {
     focusOnSelect: true,
     arrows: false,
     swipeToSlide: true,
-    // autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "ease-in-out",
     responsive: [
@@ -41,7 +64,6 @@ const Portfolio = () => {
       className="portfolio-carousel"
       style={{
         backgroundColor: "#141515",
-        minHeight: "90vh",
         padding: "40px 0px",
       }}
     >
@@ -60,14 +82,14 @@ const Portfolio = () => {
 
         @media (max-width: 900px) {
           .featured-title {
-            font-size: 2.5rem; /* smaller font below 900px */
+            font-size: 2.5rem;
             letter-spacing: 0.25em;
           }
         }
 
         @media (max-width: 768px) {
           .featured-title {
-            font-size: 2rem; /* smaller font below 768px */
+            font-size: 2rem;
             letter-spacing: 0.2em;
             margin-bottom: 0px;
           }
@@ -78,6 +100,7 @@ const Portfolio = () => {
           margin: 0 auto;
           overflow: visible;
           padding-top: 50px;
+          padding-bottom: 20px;
         }
 
         .portfolio-carousel .slick-list {
@@ -93,14 +116,14 @@ const Portfolio = () => {
         .portfolio-carousel .slick-slide {
           transition: all 0.3s ease;
           opacity: 0.5;
-          transform: scale(0.85) translateY(60px);
+          transform: scale(0.85) translateY(40px);
           display: flex;
-          align-items: flex-end;
+          align-items: center;
         }
 
         .portfolio-carousel .slick-slide.slick-center {
           opacity: 1;
-          transform: scale(1.05) translateY(-30px);
+          transform: scale(1.05) translateY(-20px);
           z-index: 10;
         }
 
@@ -157,7 +180,12 @@ const Portfolio = () => {
         <Slider {...settings}>
           {images.map((img, index) => (
             <div key={index}>
-              <div className="image-container">
+              <div
+                className={`image-container ${
+                  maxImageWidth ? "landscape-constrained" : ""
+                }`}
+                style={maxImageWidth ? { maxWidth: `${maxImageWidth}px` } : {}}
+              >
                 <img src={img} alt={`Portfolio ${index + 1}`} />
               </div>
             </div>

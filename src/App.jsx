@@ -10,7 +10,8 @@ import Gallery from "./pages/Gallery/Gallery.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
 import Services from "./pages/Services/Services.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer/Footer.jsx"
+import Footer from "./components/Footer/Footer.jsx";
+import AboutUs from "./pages/AboutUs/AboutUs.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/about-us" element={<AboutUs />} />
           </Routes>
           <Footer />
         </Router>

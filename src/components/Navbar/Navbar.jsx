@@ -37,7 +37,11 @@ const Navbar = () => {
         <nav className="nav-container">
           <div className="nav-container-left">
             <Link to="/" onClick={closeMenu}>
-              <img src={logo2} className="nav-logo" alt="Flip on my dime Logo" />
+              <img
+                src={logo2}
+                className="nav-logo"
+                alt="Flip on my dime Logo"
+              />
             </Link>
           </div>
 
@@ -46,28 +50,46 @@ const Navbar = () => {
           </div>
 
           <div className={`nav-container-right ${isOpen ? "open" : ""}`}>
-            <div className="close-btn" onClick={toggleMenu}>&times;</div>
+            <div className="close-btn" onClick={toggleMenu}>
+              &times;
+            </div>
 
-            <div className={`nav-item ${location.pathname === "/" ? "active" : ""}`}>
+            <div
+              className={`nav-item ${
+                location.pathname === "/" ? "active" : ""
+              }`}
+            >
               <Link className="nav-link" to="/" onClick={closeMenu}>
                 Home
               </Link>
             </div>
 
-            <div className={`nav-item ${location.pathname === "/gallery" ? "active" : ""}`}>
+            <div
+              className={`nav-item ${
+                location.pathname === "/gallery" ? "active" : ""
+              }`}
+            >
               <Link className="nav-link" to="/gallery" onClick={closeMenu}>
                 Free Home Evaluation
               </Link>
             </div>
 
-            <div className={`nav-item ${location.pathname === "/services" ? "active" : ""}`}>
+            <div
+              className={`nav-item ${
+                location.pathname === "/services" ? "active" : ""
+              }`}
+            >
               <Link className="nav-link" to="/services" onClick={closeMenu}>
                 Fair Cash Offer
               </Link>
             </div>
 
-            <div className={`nav-item ${location.pathname === "/contact-us" ? "active" : ""}`}>
-              <Link className="nav-link" to="/contact-us" onClick={closeMenu}>
+            <div
+              className={`nav-item ${
+                location.pathname === "/contact-us" ? "active" : ""
+              }`}
+            >
+              <Link className="nav-link" to="/about-us" onClick={closeMenu}>
                 About Us
               </Link>
             </div>

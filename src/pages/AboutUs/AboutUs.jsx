@@ -38,7 +38,7 @@ const AboutUs = () => {
   return (
     <div className="container py-5">
       <h1
-        className="text-center text-white display-5 fw-bold"
+        className="text-center text-white display-5"
         style={{
           margin: "6rem 0",
           fontFamily: "Quicksand, sans-serif",

@@ -59,8 +59,8 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <div className={`nav-item ${location.pathname === "/services" ? "active" : ""}`}>
-              <Link className="nav-link" to="/services" onClick={closeMenu}>
+            <div className={`nav-item ${location.pathname === "/cash-offer" ? "active" : ""}`}>
+              <Link className="nav-link" to="/cash-offer" onClick={closeMenu}>
                 Fair Cash Offer
               </Link>
             </div>

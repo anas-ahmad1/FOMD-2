@@ -1,5 +1,5 @@
 import React from "react";
-import "./HomeEvaluation.css";
+import "./CashOffer.css";
 import FormMobile from "../../assets/mobile-form.png";
 import FormEmail from "../../assets/email-form.png";
 import Email from "../../assets/email.png";
@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
-const HomeEvaluation = () => {
+const CashOffer = () => {
   
   const [formValues, setFormValues] = useState({
     firstName: "",
@@ -21,7 +21,8 @@ const HomeEvaluation = () => {
     email: "",
     phone: "",
     address: "",
-    message: "",
+    expectedPrice: "",
+    condition: "",
     visitTime: ""
   });
 
@@ -39,14 +40,15 @@ const HomeEvaluation = () => {
       email: formValues.email,
       phone: formValues.phone,
       address: formValues.address,
-      message: formValues.message,
+      expectedPrice: formValues.expectedPrice,
+      condition: formValues.condition,
       visitTime: formValues.visitTime
     };
 
     emailjs
       .send(
         "service_4yqxnak",
-        "template_2pttyok",
+        "template_wvylq2w",
         formData,
         "EvhYKixT-IsRt0PbT"
       )
@@ -63,7 +65,8 @@ const HomeEvaluation = () => {
             email: "",
             phone: "",
             address: "",
-            message: "",
+            expectedPrice: "",
+            condition: "",
             visitTime: ""
           });
 
@@ -115,21 +118,23 @@ const HomeEvaluation = () => {
       
       <div className="contact-us-container">
         <div className="contact-us-left-container">
-          <div className="contact-us-heading">Free Home Evaluation</div>
+          <div className="contact-us-heading">Fair Cash Offer</div>
           <div className="contact-us-text-secondary">
-            Curious about your home's value ? We provide a no-obligation home evaluation to help understand your property's market potential and work with you on the best strategies allowing you to make and informed decision and sell quickly for top dollar!
+            Our fair and fast cash offer gives you peace of mind. We evaluate your home’s current market value and provide a straightforward, transparent offer — no hidden fees or commissions. Because we pay in cash, you can choose your closing date and move on your schedule, without repairs, showings, or delays.
           </div>
-          <div className="contact-us-detail-row">
-            <FaEnvelope style={{color: 'white'}}/>
-            <div className="contact-us-detail">Neal@fliponmydime.com</div>
-          </div>
-          <div className="contact-us-detail-row">
-            <FaMapMarkerAlt style={{color: 'white'}}/>
-            <div className="contact-us-detail">Clear Lake City Houston</div>
-          </div>
-          <div className="contact-us-detail-row">
-            <FaPhoneAlt style={{color: 'white'}}/>
-            <div className="contact-us-detail">713 497 6931</div>
+          <div className="contact-us-text-secondary">
+            <h3>Reasons to sell:</h3>
+            <ul>
+              <li>Sell as-is, no repairs</li>
+              <li>No realtor fees</li>
+              <li>Avoid foreclosure or debt</li>
+              <li>Fast, guaranteed sale</li>
+              <li>Inherited property</li>
+              <li>Damaged home</li>
+              <li>Done with tenants</li>
+              <li>Second home</li>
+              <li>No showings</li>
+            </ul>
           </div>
         </div>
 
@@ -220,6 +225,21 @@ const HomeEvaluation = () => {
               </div>
               <div className="form-row">
                 <div className="input-container">
+                  <input
+                    type="text"
+                    id="expectedPrice"
+                    name="expectedPrice"
+                    placeholder="Expected Sale Price"
+                    required
+                    value={formValues.expectedPrice}
+                    onChange={(e) =>
+                      setFormValues({ ...formValues, expectedPrice: e.target.value })
+                    }
+                  />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="input-container">
                   <select
                     name="visitTime"
                     value={formValues.visitTime}
@@ -238,20 +258,22 @@ const HomeEvaluation = () => {
               </div>
               <div className="form-row">
                 <div className="input-container">
-                  <textarea
-                    style={{ resize: "none" }}
-                    id="message"
-                    name="message"
-                    rows="4"
-                    cols="50"
-                    placeholder="How can we help? "
-                    value={formValues.message}
+                  <select
+                    name="condition"
+                    value={formValues.condition}
                     onChange={(e) =>
-                      setFormValues({ ...formValues, message: e.target.value })
+                      setFormValues({ ...formValues, condition: e.target.value })
                     }
-                  ></textarea>
+                  >
+                    <option value="">Condition of the house</option>
+                    <option value="Excellent – Recently renovated, move-in ready">Excellent – Recently renovated, move-in ready</option>
+                    <option value="Good – Well-maintained, minor cosmetic updates needed">Good – Well-maintained, minor cosmetic updates needed</option>
+                    <option value="Fair – Dated, some repairs needed">Fair – Dated, some repairs needed</option>
+                    <option value="Poor – Major repairs needed (roof, foundation, electrical, plumbing systems)">Poor – Major repairs needed (roof, foundation, electrical, plumbing systems)</option>
+                  </select>
                 </div>
               </div>
+              
               <div className="form-row">
                 <button className="form-button" disabled={isSubmitting}>{isSubmitting ? <span className="spinner"></span> : "Submit"}</button>
               </div>
@@ -264,4 +286,4 @@ const HomeEvaluation = () => {
   );
 };
 
-export default HomeEvaluation;
+export default CashOffer;

@@ -1,0 +1,31 @@
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  transition: transform 0.2s ease;
+}
+
+ul li::before {
+  content: "➜";
+  color: #d39f10;
+  margin-right: 10px;
+  transition: margin-right 0.2s ease;
+}
+
+ul li:hover::before {
+  margin-right: 15px;
+  color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+    .contact-us-text-secondary{
+        text-align: left;
+        width: 90%;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+

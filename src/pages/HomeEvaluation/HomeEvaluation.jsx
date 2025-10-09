@@ -20,8 +20,9 @@ const HomeEvaluation = () => {
     lastName: "",
     email: "",
     phone: "",
+    address: "",
     message: "",
-    reason: ""
+    visitTime: ""
   });
 
   // const handleChange = (e) => setFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -37,8 +38,9 @@ const HomeEvaluation = () => {
       lastName: formValues.lastName,
       email: formValues.email,
       phone: formValues.phone,
+      address: formValues.address,
       message: formValues.message,
-      reason: formValues.reason
+      visitTime: formValues.visitTime
     };
 
     emailjs
@@ -201,23 +203,34 @@ const HomeEvaluation = () => {
               </div>
               <div className="form-row">
                 <div className="input-container">
-                  <select
-                    name="reason"
-                    value={formValues.reason}
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Address"
+                    required
+                    value={formValues.address}
                     onChange={(e) =>
-                      setFormValues({ ...formValues, reason: e.target.value })
+                      setFormValues({ ...formValues, address: e.target.value })
+                    }
+                  />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="input-container">
+                  <select
+                    name="visitTime"
+                    value={formValues.visitTime}
+                    onChange={(e) =>
+                      setFormValues({ ...formValues, visitTime: e.target.value })
                     }
                   >
-                    <option value="">Select reason to sell</option>
-                    <option value="moving">Avoid costly realtor fees/holding & closing expenses</option>
-                    <option value="investment">Foreclosure/Debt/Leins</option>
-                    <option value="downsizing">Need to sell fast with a guarantee and no surprises</option>
-                    <option value="other">Inheritance</option>
-                    <option value="other">Damaged home</option>
-                    <option value="other">Tired landlord</option>
-                    <option value="other">2nd Home</option>
-                    <option value="other">Avoid Showings</option>
-                    <option value="other">Other</option>
+                    <option value="">When should we visit?</option>
+                    <option value="Tomorrow">Tomorrow</option>
+                    <option value="This weekend">This weekend</option>
+                    <option value="Next few days">In the next few days</option>
+                    <option value="Next week">Next week</option>
+                    <option value="Not sure yet">Not sure yet</option>
                   </select>
                 </div>
               </div>

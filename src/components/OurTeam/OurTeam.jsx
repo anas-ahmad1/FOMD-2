@@ -67,7 +67,7 @@ const OurTeam = () => {
                       {partner.name}
                     </h3>
                     <p
-                      className="text-secondary small mb-2 pb-2 border-bottom border-secondary partner-content"
+                      className="small mb-2 pb-2 border-bottom border-secondary partner-content"
                       style={{
                         fontFamily: "Quicksand, sans-serif",
                       }}

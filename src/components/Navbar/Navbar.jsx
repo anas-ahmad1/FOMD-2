@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="nav-container-left">
             <Link to="/" onClick={closeMenu}>
               <img
-                src={logo2}
+                src={logo}
                 className="nav-logo"
                 alt="Flip on my dime Logo"
               />

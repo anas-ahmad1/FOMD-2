@@ -31,7 +31,7 @@ const LuxurySection = () => {
             </div>
             <div className="stat-box">
               <span className="value">
-                {inView && <CountUp start={0} end={180} duration={2} separator="," prefix="$" suffix="k+" />}
+                {inView && <CountUp start={0} end={220} duration={2} separator="," prefix="$" suffix="k+" />}
               </span>
               <span className="label">Invested in Client Homes</span>
             </div>

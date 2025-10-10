@@ -2,17 +2,21 @@ import { useState, useEffect } from "react";
 import Slider from "react-slick";
 
 const Portfolio = () => {
-  const images = [
-    "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=533&h=800&fit=crop",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=533&h=800&fit=crop",
-    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=533&h=800&fit=crop",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=533&h=800&fit=crop",
-    "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=533&h=800&fit=crop",
-  ];
-
+  const [images, setImages] = useState([]);
   const [maxImageWidth, setMaxImageWidth] = useState(null);
 
   useEffect(() => {
+    const importImages = async () => {
+      const images = Object.values(
+        import.meta.glob("../../assets/portfolio/*.jpg", {
+          eager: true,
+          import: "default",
+        })
+      );
+
+      setImages(images);
+    };
+
     const calculateMaxWidth = () => {
       const vw = window.innerWidth;
       const vh = window.innerHeight;
@@ -27,6 +31,8 @@ const Portfolio = () => {
         setMaxImageWidth(null);
       }
     };
+
+    importImages();
 
     calculateMaxWidth();
     window.addEventListener("resize", calculateMaxWidth);
@@ -151,7 +157,7 @@ const Portfolio = () => {
         }
 
         .portfolio-carousel .slick-dots {
-          bottom: -50px;
+          display: none !important;
         }
 
         .portfolio-carousel .image-container {

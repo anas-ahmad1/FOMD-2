@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const DashboardMainSection = () => {
   const navigate = useNavigate();
   const isMobile = window.innerWidth <= 768;
-  const videoSrc = isMobile ? "https://thelegalguidepost.com/assets/bg-video-mobile.mp4" : "https://thelegalguidepost.com/assets/bg-video2.mp4";
+  const videoSrc = isMobile ? "https://fliponmydime.com//assets/bg-video-mobile.mp4" : "https://fliponmydime.com//assets/bg-video2.mp4";
 
   const handleGetInTouch = () => {
     navigate("/home-evaluation");

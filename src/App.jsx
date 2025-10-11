@@ -11,12 +11,14 @@ import CashOffer from "./pages/CashOffer/CashOffer.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer.jsx";
 import AboutUs from "./pages/AboutUs/AboutUs.jsx";
+import usePageTracking from "./hooks/usePageTracking.js";
 
 function App() {
   return (
     <>
       <div className="app-container">
         <Router>
+          <PageTracker />
           <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
@@ -29,6 +31,11 @@ function App() {
       </div>
     </>
   );
+}
+
+function PageTracker() {
+  usePageTracking();
+  return null;
 }
 
 export default App;

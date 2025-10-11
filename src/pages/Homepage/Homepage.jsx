@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import "./Homepage.css";
-import HomeMainView from "../../components/HomeMainView/HomeMainView";
 import DashboardMainSection from "../../components/DashboardMainSection/DashboardMainSection";
 import WhatWeDo from "../../components/WhatWeDo/WhatWeDo";
-import HowDoesItWork from "../../components/HowDoesItWork/HowDoesItWork";
-import PageTransition from "../../components/PageTransition/PageTransition";
-import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
-import MeetTheTeam from "../../components/MeetTheTeam/MeetTheTeam";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import ExtraDetailSection from "../../components/ExtraDetailSection/ExtraDetailSection";
 import LuxurySection from "../../components/LuxurySection/LuxurySection";
@@ -69,14 +64,6 @@ const Homepage = () => {
         <OurTeam />
         <SectionHeader title="TESTIMONIALS" />
         <Testimonial />
-        {/* <HomeMainView/>
-        <PageTransition transitionDirection="l2d"/>
-        <PageTransition transitionDirection="d2l"/>
-        <HowDoesItWork/>
-        <PageTransition transitionDirection="l2d"/>
-        <WhyChooseUs/>
-        <PageTransition transitionDirection="d2l"/>
-        <MeetTheTeam/> */}
       </div>
     </>
   );

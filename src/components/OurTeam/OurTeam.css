@@ -39,3 +39,7 @@
     font-size: 1.75rem;
   }
 }
+
+.rounded-circle {
+  background-color: white !important;
+}

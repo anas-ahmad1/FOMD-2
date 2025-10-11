@@ -1,0 +1,46 @@
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 100px 40px;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.info-box {
+  flex: 1;
+  min-width: 280px;
+  background-color: rgb(30, 32, 32, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.info-text {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

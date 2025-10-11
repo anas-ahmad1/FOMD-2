@@ -6,7 +6,7 @@ import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import ExtraDetailSection from "../../components/ExtraDetailSection/ExtraDetailSection";
 import LuxurySection from "../../components/LuxurySection/LuxurySection";
 import { Helmet } from "react-helmet";
-import OurTeam from "../../components/OurTeam/Ourteam";
+import OurTeam from "../../components/OurTeam/OurTeam";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import Testimonial from "../../components/Testimonial/Testimonial";
 

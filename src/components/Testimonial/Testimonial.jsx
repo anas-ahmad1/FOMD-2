@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import "./Testimonial.css";
 
 const Testimonial = () => {
   const testimonials = [
@@ -134,6 +135,7 @@ const Testimonial = () => {
         }}
       >
         <h2
+          className="testimonial-header"
           style={{
             color: "#ffffff",
             fontSize: "3.5rem",

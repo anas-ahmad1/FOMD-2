@@ -1,7 +1,0 @@
-@media (max-width: 768px) {
-    .image-slider{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-}

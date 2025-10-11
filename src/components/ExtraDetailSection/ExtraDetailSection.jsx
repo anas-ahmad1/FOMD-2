@@ -15,7 +15,7 @@ const ExtraDetailSection = () => {
   };
 
   const handleSubmit = () => {
-    const email = "nsbirak227@gmail.com";
+    const email = "neal@fliponmydime.com";
     const subject = encodeURIComponent("Referral");
 
     const body = encodeURIComponent(

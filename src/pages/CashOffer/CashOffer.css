@@ -21,11 +21,11 @@ ul li:hover::before {
 
 
 @media (max-width: 768px) {
-    .contact-us-text-secondary{
+    .cash-offer-points{
         text-align: left;
-        width: 90%;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
+        width: 80%;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
     }
 }
 

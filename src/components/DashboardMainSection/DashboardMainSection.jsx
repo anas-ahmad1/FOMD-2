@@ -1,13 +1,11 @@
 import React from "react";
 import "./DashboardMainSection.css";
 import { useNavigate } from "react-router-dom";
-import bgVideo from "../../assets/bg-video2.mp4";
-import bgVideoMobile from "../../assets/bg-video-mobile.mp4";
 
 const DashboardMainSection = () => {
   const navigate = useNavigate();
   const isMobile = window.innerWidth <= 768;
-  const videoSrc = isMobile ? bgVideoMobile : bgVideo;
+  const videoSrc = isMobile ? "https://thelegalguidepost.com/assets/bg-video-mobile.mp4" : "https://thelegalguidepost.com/assets/bg-video2.mp4";
 
   const handleGetInTouch = () => {
     navigate("/home-evaluation");

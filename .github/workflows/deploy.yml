@@ -33,4 +33,3 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_REMOTE_DIR }}
-          delete: true

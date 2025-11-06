@@ -2,7 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import "./LuxurySection.css";
-import bgImage from "../../assets/luxury-section-bg.jpg";
+import bgImage from "../../assets/luxury-section-bg.webp";
 
 const LuxurySection = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
@@ -15,9 +15,9 @@ const LuxurySection = () => {
     >
       <div className="overlay">
         <div className="content">
-          <h1 className="heading">
+          <h2 className="heading">
             LUXURY REAL ESTATE, BACKED BY RESULTS
-          </h1>
+          </h2>
           <p className="subheading">
             At Flip on My Dime, Neal & Puja bring vision, expertise, and proven results to every project
           </p>

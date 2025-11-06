@@ -74,12 +74,12 @@ const Portfolio = () => {
         padding: "40px 0px",
       }}
     >
-      <h1
+      <h2
         className="featured-title px-3"
         style={{ fontFamily: "Quicksand, sans-serif", letterSpacing: "0.1em" }}
       >
         FEATURED PORTFOLIO
-      </h1>
+      </h2>
 
       <style>{`
         .featured-title {
@@ -198,7 +198,7 @@ const Portfolio = () => {
                 }`}
                 style={maxImageWidth ? { maxWidth: `${maxImageWidth}px` } : {}}
               >
-                <img src={img} alt={`Portfolio ${index + 1}`} />
+                <img src={img} loading={index === 0 ? "eager" : "lazy"} alt={`Portfolio image number: ${index + 1}`} />
               </div>
             </div>
           ))}

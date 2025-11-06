@@ -9,24 +9,63 @@ import { Helmet } from "react-helmet";
 import OurTeam from "../../components/OurTeam/OurTeam";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import Testimonial from "../../components/Testimonial/Testimonial";
+import socialImage from "../../assets/logo.jpeg";
 
 const Homepage = () => {
   return (
     <>
       <Helmet>
         <title>
-          Flip on My Dime | Stress-Free Home Flipping & Selling Services
+          Flip on My Dime | Low Commission Realtors & Cash Home Buyers in
+          Houston
         </title>
+
         <meta
           name="description"
-          content="Let Flip on My Dime upgrade and sell your home for top dollar with no upfront cost. Stress-free renovations, valuable upgrades, and shared profits."
+          content="Flip on My Dime helps homeowners in Houston sell fast and profit more — offering low commission realtor services, cash home offers, and no-upfront-cost renovations."
         />
+
+        <meta
+          name="keywords"
+          content="low commission realtor Houston, cash home buyers Houston, renovate before selling, real estate investors Houston, sell your house fast, home renovations before sale, full service realtor low fees"
+        />
+
+        <link rel="canonical" href="https://fliponmydime.com/" />
+
+        <meta
+          property="og:title"
+          content="Flip on My Dime: Sell Your Houston Home for More Profit"
+        />
+        <meta
+          property="og:description"
+          content="Houston's full-service real estate partner: offering low commission realtor fees, immediate cash offers, and no-cost-to-you renovation programs."
+        />
+        <meta property="og:url" content="https://fliponmydime.com/" />
+        <meta property="og:site_name" content="Flip on My Dime" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Flip on My Dime: Low Commission Realtors in Houston"
+        />
+        <meta
+          name="twitter:description"
+          content="Stop paying high fees. We help Houston homeowners profit more with low commissions, fast cash offers, and pre-sale renovations."
+        />
+        <meta name="twitter:image" content={socialImage} />
+
         <script type="application/ld+json">
           {`
+      {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Flip on my dime",
-        "description": "Flip on my dime is a boutique, all-inclusive real estate renovation service in Houston, USA. We specialize in helping homeowners increase the value of their homes before selling — with no upfront cost. From stress-free upgrades to expert market knowledge, we handle the transformation and help you flip your home for maximum profit.",
+        "name": "Flip on My Dime",
+        "description": "Flip on My Dime is a Houston-based real estate company helping clients renovate, sell, or get a fast cash offer with no upfront cost.",
         "url": "https://fliponmydime.com/",
         "telephone": "+1-713-497-6931",
         "address": {
@@ -35,20 +74,12 @@ const Homepage = () => {
           "addressRegion": "TX",
           "addressCountry": "US"
         },
-        "logo": "https://fliponmydime.com/logo.jpeg",
-        "areaServed": {
-          "@type": "Place",
-          "name": "Houston"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Support",
-          "telephone": "+1-713-497-6931"
-        },
+        "areaServed": ["Houston", "Pearland", "Friendswood", "Sugar Land", "League City"],
         "sameAs": [
           "https://fliponmydime.com/"
         ]
-      `}
+      }
+    `}
         </script>
       </Helmet>
 

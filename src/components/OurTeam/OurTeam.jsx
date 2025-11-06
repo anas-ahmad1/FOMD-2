@@ -1,8 +1,8 @@
 import "./OurTeam.css";
-import teamMember1 from "../../assets/teamMember1.jpg";
-import teamMember2 from "../../assets/teamMember2.jpg";
-import teamMember3 from "../../assets/teamMember3.png";
-import teamMember4 from "../../assets/teamMember4.jpg";
+import teamMember1 from "../../assets/teamMember1.webp";
+import teamMember2 from "../../assets/teamMember2.webp";
+import teamMember3 from "../../assets/teamMember3.webp";
+import teamMember4 from "../../assets/teamMember4.webp";
 
 const OurTeam = () => {
   const partners = [

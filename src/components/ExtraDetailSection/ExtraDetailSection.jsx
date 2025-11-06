@@ -39,7 +39,7 @@ const ExtraDetailSection = () => {
       </div>
 
       <div className="column middle-column">
-        <img src={img} alt="Interior" />
+        <img src={img} alt="Image showing Interior Design" />
       </div>
 
       <div className="column right-column">

@@ -38,6 +38,22 @@
   line-height: 1.5;
 }
 
+.info-link {
+  display: block;
+  margin-top: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.info-link:hover {
+  color: #bbb6a7;
+}
+
 @media (max-width: 768px) {
   .info-container {
     flex-direction: column;

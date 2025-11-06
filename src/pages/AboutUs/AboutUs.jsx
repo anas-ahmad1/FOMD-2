@@ -1,7 +1,9 @@
-import teamMember1 from "../../assets/teamMember1.jpg";
-import teamMember2 from "../../assets/teamMember2.jpg";
-import teamMember3 from "../../assets/teamMember3.png";
-import teamMember4 from "../../assets/teamMember4.jpg";
+import teamMember1 from "../../assets/teamMember1.webp";
+import teamMember2 from "../../assets/teamMember2.webp";
+import teamMember3 from "../../assets/teamMember3.webp";
+import teamMember4 from "../../assets/teamMember4.webp";
+import { Helmet } from "react-helmet";
+import socialImage from "../../assets/logo.jpeg";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -36,60 +38,130 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="container py-5">
-      <h1
-        className="text-center text-white display-5"
-        style={{
-          margin: "6rem 0",
-          fontFamily: "Quicksand, sans-serif",
-          textTransform: "uppercase",
-        }}
-      >
-        About Our Team
-      </h1>
+    <>
+      <Helmet>
+        <title>
+          About Us | Flip on My Dime — Ethical, Low Commission Realtors in
+          Houston
+        </title>
 
-      {teamMembers.map((member, index) => {
-        const isEven = index % 2 === 0;
+        <meta
+          name="description"
+          content="Flip on My Dime is a Houston-based, ethical real estate company offering low-commission realtor services, fair cash offers, and full-service renovation-to-sale solutions. Meet the team committed to transparency, value, and helping homeowners sell for top dollar."
+        />
 
-        return (
-          <div key={member.id} className="row align-items-center mb-5 pb-4">
-            <div
-              className={`col-12 col-lg-4 text-center mb-4 mb-lg-0 ${
-                !isEven ? "order-lg-last" : ""
-              }`}
-            >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="rounded-circle img-fluid"
-                style={{ width: "250px", height: "250px", objectFit: "cover" }}
-              />
-            </div>
+        <meta
+          name="keywords"
+          content="ethical real estate company, low commission realtor Houston, full service realtor low fees, fair honest cash offer, cash home buyers Houston, renovate before you sell, sell your home for less commission, Houston real estate experts"
+        />
 
-            <div className="col-12 col-lg-8 px-4 px-sm-2 px-md-0">
-              <h2
-                className="mb-4 text-white text-center text-lg-start"
-                style={{
-                  fontFamily: "Poppins",
-                }}
+        <link rel="canonical" href="https://fliponmydime.com/about-us" />
+
+        <meta
+          property="og:title"
+          content="Meet the Team: The Ethical, Low Commission Realtors of Flip on My Dime"
+        />
+        <meta
+          property="og:description"
+          content="Learn about Neal, Puja, and our partners. We are Houston's trusted real estate experts committed to transparency, value, and maximizing your home sale profit."
+        />
+        <meta property="og:url" content="https://fliponmydime.com/about-us" />
+        <meta property="og:site_name" content="Flip on My Dime" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Houston Real Estate Experts: Meet the Flip on My Dime Team"
+        />
+        <meta
+          name="twitter:description"
+          content="Our co-founders and partners bring expertise in renovations, low commission sales, and ethical real estate investing to every client."
+        />
+        <meta name="twitter:image" content={socialImage} />
+
+        <script type="application/ld+json">
+          {`{
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Flip on My Dime",
+      "url": "https://fliponmydime.com/about-us",
+      "telephone": "+1-713-497-6931",
+      "description": "Flip on My Dime is a Houston-based real estate company offering low commission realtor services, cash home purchases, and renovation-first selling strategies with transparent fees.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Clear Lake City",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": ["Houston","Pearland","Friendswood","Clear Lake","League City","Sugar Land"],
+      "sameAs": ["https://fliponmydime.com/"]
+    }`}
+        </script>
+      </Helmet>
+      <div className="container py-5">
+        <h1
+          className="text-center text-white display-5"
+          style={{
+            margin: "6rem 0",
+            fontFamily: "Quicksand, sans-serif",
+            textTransform: "uppercase",
+          }}
+        >
+          About Our Team
+        </h1>
+
+        {teamMembers.map((member, index) => {
+          const isEven = index % 2 === 0;
+
+          return (
+            <div key={member.id} className="row align-items-center mb-5 pb-4">
+              <div
+                className={`col-12 col-lg-4 text-center mb-4 mb-lg-0 ${
+                  !isEven ? "order-lg-last" : ""
+                }`}
               >
-                {member.name}
-              </h2>
-              <p
-                className="text-white"
-                style={{
-                  fontFamily: "Quicksand, sans-serif",
-                  lineHeight: "1.8",
-                  textAlign: "justify",
-                }}
-              >
-                {member.description}
-              </p>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="rounded-circle img-fluid"
+                  style={{
+                    width: "250px",
+                    height: "250px",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+
+              <div className="col-12 col-lg-8 px-4 px-sm-2 px-md-0">
+                <h2
+                  className="mb-4 text-white text-center text-lg-start"
+                  style={{
+                    fontFamily: "Poppins",
+                  }}
+                >
+                  {member.name}
+                </h2>
+                <p
+                  className="text-white"
+                  style={{
+                    fontFamily: "Quicksand, sans-serif",
+                    lineHeight: "1.8",
+                    textAlign: "justify",
+                  }}
+                >
+                  {member.description}
+                </p>
+              </div>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

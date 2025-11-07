@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./WhatWeDo.css";
-import img from "../../assets/dashboard-bg-img.webp";
+import imgDesktop from "../../assets/dashboard-bg-img.webp";
 import imgMobile from "../../assets/dashboard-bg-img-mobile.webp";
 
 const WhatWeDo = () => {
-  const [isMobile] = useState(() =>
-    typeof window !== "undefined" ? window.innerWidth <= 768 : false
-  );
-
-  const bg = isMobile ? imgMobile : img;
-
   const boxes = [
     {
       title: "Sell with Confidence",
@@ -32,20 +27,34 @@ const WhatWeDo = () => {
   ];
 
   return (
-    <div className="info-container" style={{ backgroundImage: `url(${bg})` }}>
-      {boxes.map((box, index) => (
-        <div key={index} className="info-box">
-          <h2 className="info-title">{box.title}</h2>
-          <p className="info-text">{box.text}</p>
-          <a
-              href={box.to}
-              className="info-link"
-            >
-              {box.linkText} &rarr;
-            </a>
+    <section
+      className="info-section"
+      aria-labelledby="whatwedo-heading"
+    >
+      <img
+        src={imgDesktop}
+        srcSet={`${imgMobile} 768w, ${imgDesktop} 1200w`}
+        sizes="(max-width: 768px) 768px, 1200px"
+        alt="Home renovation and real estate services background"
+        className="info-bg-image"
+        loading="lazy"
+        decoding="async"
+      />
+
+      <div className="info-overlay">
+        <div className="info-container">
+          {boxes.map((box, index) => (
+            <article key={index} className="info-box">
+              <h3 className="info-title">{box.title}</h3>
+              <p className="info-text">{box.text}</p>
+              <Link to={box.to} className="info-link">
+                {box.linkText} →
+              </Link>
+            </article>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 };
 

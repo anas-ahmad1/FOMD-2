@@ -1,13 +1,13 @@
 import React from "react";
 import "./CashOffer.css";
-import FormMobile from "../../assets/mobile-form.png";
-import FormEmail from "../../assets/email-form.png";
+import FormMobile from "../../assets/mobile-form.webp";
+import FormEmail from "../../assets/email-form.webp";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet";
-import socialImage from "../../assets/logo.jpeg";
+import socialImage from "../../assets/logo.webp";
 
 const CashOffer = () => {
   const [formValues, setFormValues] = useState({
@@ -80,7 +80,7 @@ const CashOffer = () => {
     <>
       <Helmet>
         <title>
-          Sell Your House Fast | Fair Cash Offer in Houston | Flip on My Dime
+          Fair Cash Offer | Sell Your House Fast in Houston | Flip on My Dime
         </title>
 
         <meta

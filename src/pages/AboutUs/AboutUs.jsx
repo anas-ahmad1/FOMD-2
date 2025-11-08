@@ -3,7 +3,7 @@ import teamMember2 from "../../assets/teamMember2.webp";
 import teamMember3 from "../../assets/teamMember3.webp";
 import teamMember4 from "../../assets/teamMember4.webp";
 import { Helmet } from "react-helmet";
-import socialImage from "../../assets/logo.jpeg";
+import socialImage from "../../assets/logo.webp";
 
 const AboutUs = () => {
   const teamMembers = [

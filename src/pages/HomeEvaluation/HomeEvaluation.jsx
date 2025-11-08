@@ -1,14 +1,14 @@
 import React from "react";
 import "./HomeEvaluation.css";
-import FormMobile from "../../assets/mobile-form.png";
-import FormEmail from "../../assets/email-form.png";
+import FormMobile from "../../assets/mobile-form.webp";
+import FormEmail from "../../assets/email-form.webp";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { Helmet } from "react-helmet";
-import socialImage from "../../assets/logo.jpeg";
+import socialImage from "../../assets/logo.webp";
 
 const HomeEvaluation = () => {
   const [formValues, setFormValues] = useState({

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import img from "../../assets/Gallery19.jpg";
+import img from "../../assets/Gallery19.webp";
 import "./ExtraDetailSection.css";
 
 const ExtraDetailSection = () => {

@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 import OurTeam from "../../components/OurTeam/OurTeam";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import Testimonial from "../../components/Testimonial/Testimonial";
-import socialImage from "../../assets/logo.jpeg";
+import socialImage from "../../assets/logo.webp";
 
 const Homepage = () => {
   return (

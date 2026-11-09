@@ -34,7 +34,7 @@
 
 .nav-logo{
     height: auto;
-    width: 150px;
+    width: 90px;
 }
 
 .nav-container-right {
@@ -99,7 +99,7 @@
 @media (max-width: 1300px) {
     .nav-logo{
         height: auto;
-        width: 100px;
+        width: 70px;
     }
 
     .nav-container {

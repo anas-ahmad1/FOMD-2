@@ -1,4 +1,3 @@
-import React from "react";
 import "./HomeEvaluation.css";
 import FormMobile from "../../assets/mobile-form.webp";
 import FormEmail from "../../assets/email-form.webp";
@@ -8,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { Helmet } from "react-helmet";
-import socialImage from "../../assets/logo.webp";
+const socialImage = "https://postoakrealtytx.com/og-image.png";
 
 const HomeEvaluation = () => {
   const [formValues, setFormValues] = useState({
@@ -45,7 +44,7 @@ const HomeEvaluation = () => {
         "EvhYKixT-IsRt0PbT"
       )
       .then(
-        (response) => {
+        () => {
           toast.success("Form submitted successfully!", {
             position: "top-right",
             autoClose: 3000,
@@ -63,7 +62,7 @@ const HomeEvaluation = () => {
 
           setIsSubmitting(false);
         },
-        (error) => {
+        () => {
           toast.error("Failed to send email. Please try again!", {
             position: "top-right",
             autoClose: 3000,
@@ -78,12 +77,12 @@ const HomeEvaluation = () => {
     <>
       <Helmet>
         <title>
-          Free Home Evaluation | Find Your Home's True Value | Flip on My Dime
+          Free Home Evaluation | Find Your Home&apos;s True Value | Post Oak Realty Advisors
         </title>
 
         <meta
           name="description"
-          content="Get a free, no-obligation home evaluation from Flip on My Dime. Discover your home's market value and learn how to sell for top dollar with Houston's trusted low commission real estate experts."
+          content="Get a free, no-obligation home evaluation from Post Oak Realty Advisors. Discover your home's market value and learn how to sell for top dollar with Houston's trusted low commission real estate experts."
         />
 
         <meta
@@ -91,7 +90,7 @@ const HomeEvaluation = () => {
           content="free home evaluation, home value estimate Houston, how much is my home worth, real estate evaluation Houston, no obligation home evaluation, Houston home appraisal for sellers, sell your home for top dollar, low commission realtor Houston"
         />
 
-        <link rel="canonical" href="https://fliponmydime.com/home-evaluation" />
+        <link rel="canonical" href="https://postoakrealtytx.com/home-evaluation" />
 
         <meta
           property="og:title"
@@ -99,13 +98,13 @@ const HomeEvaluation = () => {
         />
         <meta
           property="og:description"
-          content="Discover your property’s true market value with a free, no-obligation evaluation from Flip on My Dime. Start your home selling journey now!"
+          content="Discover your property’s true market value with a free, no-obligation evaluation from Post Oak Realty Advisors. Start your home selling journey now!"
         />
         <meta
           property="og:url"
-          content="https://fliponmydime.com/home-evaluation"
+          content="https://postoakrealtytx.com/home-evaluation"
         />
-        <meta property="og:site_name" content="Flip on My Dime" />
+        <meta property="og:site_name" content="Post Oak Realty Advisors" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={socialImage} />
         <meta property="og:image:width" content="1200" />
@@ -131,9 +130,9 @@ const HomeEvaluation = () => {
         "serviceType": "Home Evaluation",
         "provider": {
           "@type": "LocalBusiness",
-          "name": "Flip on My Dime",
+          "name": "Post Oak Realty Advisors",
           "areaServed": ["Houston", "Pearland", "Friendswood", "Clear Lake", "League City"],
-          "url": "https://fliponmydime.com/home-evaluation"
+          "url": "https://postoakrealtytx.com/home-evaluation"
         },
         "description": "Free home evaluation service helping homeowners in Houston estimate their property's value and sell for maximum profit.",
         "offers": {
@@ -151,14 +150,14 @@ const HomeEvaluation = () => {
         <div className="contact-us-left-container">
           <div className="contact-us-heading">Free Home Evaluation</div>
           <div className="contact-us-text-secondary">
-            Curious about your home's value ? We provide a no-obligation home
-            evaluation to help understand your property's market potential and
+            Curious about your home&apos;s value ? We provide a no-obligation home
+            evaluation to help understand your property&apos;s market potential and
             work with you on the best strategies allowing you to make and
             informed decision and sell quickly for top dollar!
           </div>
           <div className="contact-us-detail-row">
             <FaEnvelope style={{ color: "white" }} />
-            <div className="contact-us-detail">Neal@fliponmydime.com</div>
+            <div className="contact-us-detail">Neal@postoakrealtytx.com</div>
           </div>
           <div className="contact-us-detail-row">
             <FaMapMarkerAlt style={{ color: "white" }} />

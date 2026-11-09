@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./DashboardMainSection.css";
 import { useNavigate } from "react-router-dom";
 
@@ -13,8 +13,8 @@ const DashboardMainSection = () => {
   }, []);
 
   const videoSrc = isMobile
-    ? "https://fliponmydime.com/assets/bg-video-mobile.mp4"
-    : "https://fliponmydime.com/assets/bg-video2.mp4";
+    ? "/assets/bg-video-mobile.mp4"
+    : "/assets/bg-video2.mp4";
 
   const handleGetInTouch = () => {
     navigate("/home-evaluation");
@@ -23,7 +23,7 @@ const DashboardMainSection = () => {
   return (
     <section
       className="hero-video-container"
-      aria-label="Flip on My Dime — Home renovation and real estate services in Houston"
+      aria-label="Post Oak Realty Advisors — Home renovation and real estate services in Houston"
     >
       <video
         className="hero-video"
@@ -32,7 +32,7 @@ const DashboardMainSection = () => {
         muted
         playsInline
         preload="auto"
-        poster="https://fliponmydime.com/assets/video-poster.webp"
+        poster="/assets/video-poster.webp"
       >
         <source src={videoSrc} type="video/mp4" />
         Sorry, your browser does not support this video.

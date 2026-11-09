@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 import instagram from "../../assets/instagram.webp";
 import facebook from "../../assets/facebook.webp";
@@ -42,9 +41,26 @@ const Footer = () => {
             </div>
           </div>
 
+          <div className="footer-row footer-links">
+            <a
+              href="/legal/information-about-brokerage-services.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Information About Brokerage Services
+            </a>
+            <a
+              href="/legal/consumer-protection-notice.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Consumer Protection Notice
+            </a>
+          </div>
+
           <div className="footer-row">
             <div className="footer-text">
-              &copy; 2025 Flip on My Dime | All rights Reserved
+              &copy; 2025 Post Oak Realty Advisors | All rights Reserved
             </div>
           </div>
 

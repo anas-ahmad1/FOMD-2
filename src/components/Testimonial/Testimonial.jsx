@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import "./Testimonial.css";
 
 const Testimonial = () => {
+  // To add a review, paste a new entry at the end with the next unused id:
+  // { id: 11, text: "Review text", name: "First L", date: "01 Nov, 2025" },
   const testimonials = [
     {
       id: 1,
@@ -145,7 +147,7 @@ const Testimonial = () => {
             letterSpacing: "-0.02em",
           }}
         >
-          Don't take our word for it,
+          Don&apos;t take our word for it,
           <br />
           see what our clients say
         </h2>

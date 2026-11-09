@@ -1,4 +1,3 @@
-import React from "react";
 import "./CashOffer.css";
 import FormMobile from "../../assets/mobile-form.webp";
 import FormEmail from "../../assets/email-form.webp";
@@ -7,7 +6,7 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet";
-import socialImage from "../../assets/logo.webp";
+const socialImage = "https://postoakrealtytx.com/og-image.png";
 
 const CashOffer = () => {
   const [formValues, setFormValues] = useState({
@@ -46,7 +45,7 @@ const CashOffer = () => {
         "EvhYKixT-IsRt0PbT"
       )
       .then(
-        (response) => {
+        () => {
           toast.success("Form submitted successfully!", {
             position: "top-right",
             autoClose: 3000,
@@ -65,7 +64,7 @@ const CashOffer = () => {
 
           setIsSubmitting(false);
         },
-        (error) => {
+        () => {
           toast.error("Failed to send email. Please try again!", {
             position: "top-right",
             autoClose: 3000,
@@ -80,12 +79,12 @@ const CashOffer = () => {
     <>
       <Helmet>
         <title>
-          Fair Cash Offer | Sell Your House Fast in Houston | Flip on My Dime
+          Fair Cash Offer | Sell Your House Fast in Houston | Post Oak Realty Advisors
         </title>
 
         <meta
           name="description"
-          content="Get a fast and fair cash offer for your Houston home. Flip on My Dime buys houses as-is — no repairs, no realtor fees, and you choose the closing date. Sell your home quickly and move on your schedule."
+          content="Get a fast and fair cash offer for your Houston home. Post Oak Realty Advisors buys houses as-is — no repairs, no realtor fees, and you choose the closing date. Sell your home quickly and move on your schedule."
         />
 
         <meta
@@ -93,7 +92,7 @@ const CashOffer = () => {
           content="cash home buyers Houston, sell my house fast Houston, we buy houses Houston, sell house as is Houston, no repairs home sale, fair cash offer for your home, Houston home investors, quick home sale Houston"
         />
 
-        <link rel="canonical" href="https://fliponmydime.com/cash-offer" />
+        <link rel="canonical" href="https://postoakrealtytx.com/cash-offer" />
 
         <meta
           property="og:title"
@@ -103,8 +102,8 @@ const CashOffer = () => {
           property="og:description"
           content="Sell your house 'as-is' in Houston without repairs, showings, or realtor fees. Get a transparent, no-obligation cash offer and close on your schedule."
         />
-        <meta property="og:url" content="https://fliponmydime.com/cash-offer" />
-        <meta property="og:site_name" content="Flip on My Dime" />
+        <meta property="og:url" content="https://postoakrealtytx.com/cash-offer" />
+        <meta property="og:site_name" content="Post Oak Realty Advisors" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={socialImage} />
         <meta property="og:image:width" content="1200" />
@@ -130,11 +129,11 @@ const CashOffer = () => {
         "serviceType": "Cash Home Buying",
         "provider": {
           "@type": "LocalBusiness",
-          "name": "Flip on My Dime",
-          "url": "https://fliponmydime.com/cash-offer",
+          "name": "Post Oak Realty Advisors",
+          "url": "https://postoakrealtytx.com/cash-offer",
           "areaServed": ["Houston", "Pearland", "Friendswood", "League City", "Sugar Land"]
         },
-        "description": "Flip on My Dime offers fast, fair cash offers for homes in Houston and surrounding areas. Sell your home as-is with no repairs or fees.",
+        "description": "Post Oak Realty Advisors offers fast, fair cash offers for homes in Houston and surrounding areas. Sell your home as-is with no repairs or fees.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "USD",

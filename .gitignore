@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-src/assets/bg-video2.mp4
-src/assets/bg-video-mobile.mp4
+
+# Raw client files (copied into public/ as needed)
+Files/

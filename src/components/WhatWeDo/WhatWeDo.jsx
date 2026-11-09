@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./WhatWeDo.css";
 import imgDesktop from "../../assets/dashboard-bg-img.webp";
@@ -8,13 +7,13 @@ const WhatWeDo = () => {
   const boxes = [
     {
       title: "Sell with Confidence",
-      text: "When you call Flip On My Dime, you’ll speak directly with Neal or Puja—no middlemen. We believe real estate should be personal, not transactional, so we provide one-on-one guidance every step of the way. Whether you’re selling, upgrading, or downsizing, we combine market expertise with genuine care to help you make the best decisions. Our fair, transparent compensation of 1.5–2% ensures you keep more of what’s yours.",
+      text: "When you call Post Oak Realty Advisors, you’ll speak directly with Neal or Puja—no middlemen. We believe real estate should be personal, not transactional, so we provide one-on-one guidance every step of the way. Whether you’re selling, upgrading, or downsizing, we combine market expertise with genuine care to help you make the best decisions. Our fair, transparent compensation of 1.5–2% ensures you keep more of what’s yours.",
       linkText: "Get a Free Home Evaluation",
       to: "/home-evaluation",
     },
     {
-      title: "Flip Your Home",
-      text: "We make upgrading and flipping simple—no upfront costs, no stress. Using our trusted network of skilled, low-cost contractors, we manage the entire process from start to finish. Our approach helps you unlock your home’s full potential and achieve the highest possible return while protecting your hard-earned equity.",
+      title: "Upgrade Before You Sell",
+      text: "We make upgrading your home before the sale simple—no upfront costs, no stress. Using our trusted network of skilled, low-cost contractors, we manage the entire process from start to finish. Our approach helps you unlock your home’s full potential and achieve the highest possible return while protecting your hard-earned equity.",
       linkText: "Meet Our Team & Partners",
       to: "/about-us",
     },

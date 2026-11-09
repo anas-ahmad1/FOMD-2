@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import Homepage from "./pages/Homepage/Homepage.jsx";
 import HomeEvaluation from "./pages/HomeEvaluation/HomeEvaluation.jsx";
 import CashOffer from "./pages/CashOffer/CashOffer.jsx";
+import Blogs from "./pages/Blogs/Blogs.jsx";
+import NotFound from "./pages/NotFound/NotFound.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer.jsx";
 import AboutUs from "./pages/AboutUs/AboutUs.jsx";
@@ -25,6 +27,8 @@ function App() {
             <Route path="/home-evaluation" element={<HomeEvaluation />} />
             <Route path="/cash-offer" element={<CashOffer />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </Router>

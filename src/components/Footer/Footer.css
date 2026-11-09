@@ -46,3 +46,21 @@
   height: 1rem;
 }
 
+
+.footer-links {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.footer-links a {
+  color: white;
+  opacity: 0.85;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}

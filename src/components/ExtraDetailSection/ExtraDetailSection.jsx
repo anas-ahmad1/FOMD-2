@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import img from "../../assets/Gallery19.webp";
 import "./ExtraDetailSection.css";
 
@@ -15,11 +15,11 @@ const ExtraDetailSection = () => {
   };
 
   const handleSubmit = () => {
-    const email = "neal@fliponmydime.com";
+    const email = "neal@postoakrealtytx.com";
     const subject = encodeURIComponent("Referral");
 
     const body = encodeURIComponent(
-      `Howdy!\n\nI know someone who wants to sell their home and use the trusted expertise services of Neal and Puja at Flip On My Dime! They would love to have local professionals, financial resources, and take all the stress away from the selling process.\n\nHere are their details:\n\nName: ${formData.name}\nContact: ${formData.contact}\n\nThanks!`
+      `Howdy!\n\nI know someone who wants to sell their home and use the trusted expertise services of Neal and Puja at Post Oak Realty Advisors! They would love to have local professionals, financial resources, and take all the stress away from the selling process.\n\nHere are their details:\n\nName: ${formData.name}\nContact: ${formData.contact}\n\nThanks!`
     );
 
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
@@ -49,7 +49,7 @@ const ExtraDetailSection = () => {
           upgrades that are currently hot in today’s market!
           <br />
           <br />
-          Selling? Flip your home with no money! Let us do all the work and you
+          Selling? Upgrade your home with no money out of pocket! Let us do all the work and you
           keep your hard-earned equity!
           <br />
           <br />

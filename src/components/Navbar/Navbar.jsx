@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../assets/logo.webp";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
@@ -39,7 +39,7 @@ const Navbar = () => {
               <img
                 src={logo}
                 className="nav-logo"
-                alt="Flip on my dime Logo"
+                alt="Post Oak Realty Advisors Logo"
               />
             </Link>
           </div>
@@ -94,6 +94,16 @@ const Navbar = () => {
             >
               <Link className="nav-link" to="/about-us" onClick={closeMenu}>
                 About Us
+              </Link>
+            </div>
+
+            <div
+              className={`nav-item ${
+                location.pathname.startsWith("/blogs") ? "active" : ""
+              }`}
+            >
+              <Link className="nav-link" to="/blogs" onClick={closeMenu}>
+                Blogs
               </Link>
             </div>
           </div>

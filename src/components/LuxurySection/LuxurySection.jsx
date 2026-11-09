@@ -1,4 +1,3 @@
-import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import "./LuxurySection.css";
@@ -16,7 +15,7 @@ const LuxurySection = () => {
       <img
         src={bgImageDesktop}
         sizes="(max-width: 768px) 768px, 1200px"
-        alt="Luxury real estate background - elegant home interior representing Flip on My Dime renovation success"
+        alt="Luxury real estate background - elegant home interior representing Post Oak Realty Advisors renovation success"
         className="luxury-bg-image"
         loading="lazy"
         decoding="async"
@@ -28,7 +27,7 @@ const LuxurySection = () => {
             LUXURY REAL ESTATE, BACKED BY RESULTS
           </h2>
           <p className="subheading">
-            At Flip on My Dime, Neal & Puja bring vision, expertise, and proven
+            At Post Oak Realty Advisors, Neal & Puja bring vision, expertise, and proven
             results to every project.
           </p>
 

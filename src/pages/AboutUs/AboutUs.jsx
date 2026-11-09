@@ -3,7 +3,7 @@ import teamMember2 from "../../assets/teamMember2.webp";
 import teamMember3 from "../../assets/teamMember3.webp";
 import teamMember4 from "../../assets/teamMember4.webp";
 import { Helmet } from "react-helmet";
-import socialImage from "../../assets/logo.webp";
+const socialImage = "https://postoakrealtytx.com/og-image.png";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -12,14 +12,14 @@ const AboutUs = () => {
       name: "Neal Birak",
       image: teamMember1,
       description:
-        "Neal Birak is a seasoned passionate real estate professional and co-founder of Flip On My Dime, bringing years of experience in buying, selling, developing and investing in homes. Known for his honesty, integrity, and boutique approach, Neal provides personalized guidance that helps homeowners maximize equity, navigate complex sales, and make confident, informed decisions. He also has extensive knowledge of construction and design and has been consulting on new construction projects, giving him a unique ability to evaluate properties and advise clients on renovations or investments. Beyond real estate, Neal is an active community leader and youth coach, dedicated to mentoring and giving back, and he approaches everything he does with passion, energy, and unwavering commitment. Neal's mission is to make buying or selling a home stress-free, profitable, and personal, while positively impacting the community along the way.",
+        "Neal Birak is a seasoned passionate real estate professional and co-founder of Post Oak Realty Advisors, bringing years of experience in buying, selling, developing and investing in homes. Known for his honesty, integrity, and boutique approach, Neal provides personalized guidance that helps homeowners maximize equity, navigate complex sales, and make confident, informed decisions. He also has extensive knowledge of construction and design and has been consulting on new construction projects, giving him a unique ability to evaluate properties and advise clients on renovations or investments. Beyond real estate, Neal is an active community leader and youth coach, dedicated to mentoring and giving back, and he approaches everything he does with passion, energy, and unwavering commitment. Neal's mission is to make buying or selling a home stress-free, profitable, and personal, while positively impacting the community along the way.",
     },
     {
       id: 2,
       name: "Puja Birak",
       image: teamMember2,
       description:
-        "Puja Birak is a dedicated real estate professional and co-founder of Flip On My Dime, committed to providing a boutique, ethical, and highly personalized experience for every client. Puja has a sharp eye for unlocking a home's full potential through strategic renovations, ensuring clients not only sell but sell smart. Known for a hands-on approach, Puja often invests personal time and resources into properties to maximize client returns, elevating homes so they stand out in the market. With a background in counseling, Puja brings strong interpersonal skills to every transaction and leverages this expertise in extensive, strategic negotiations that protect client interests. Passionate, dedicated, and attentive, Puja tailors strategies to each client's unique needs, providing guidance, care, and expertise that make every real estate journey smooth, profitable, and stress-free.",
+        "Puja Birak is a dedicated real estate professional and co-founder of Post Oak Realty Advisors, committed to providing a boutique, ethical, and highly personalized experience for every client. Puja has a sharp eye for unlocking a home's full potential through strategic renovations, ensuring clients not only sell but sell smart. Known for a hands-on approach, Puja often invests personal time and resources into properties to maximize client returns, elevating homes so they stand out in the market. With a background in counseling, Puja brings strong interpersonal skills to every transaction and leverages this expertise in extensive, strategic negotiations that protect client interests. Passionate, dedicated, and attentive, Puja tailors strategies to each client's unique needs, providing guidance, care, and expertise that make every real estate journey smooth, profitable, and stress-free.",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ const AboutUs = () => {
       name: "Cathy Grilli",
       image: teamMember4,
       description:
-        "Cathy Grilli is an award-winning home staging company based in Seabrook, Texas. She is one of only two certified Master Stagers in the state of Texas. Before establishing Funkswank Design, Cathy gained hands-on experience by flipping houses, which gave her a deep understanding of how staged homes can significantly enhance buyer appeal. This expertise allows her to transform vacant or underwhelming spaces into inviting, market-ready environments that help properties sell faster and at top dollar.",
+        "Cathy Grilli is an award-winning home staging company based in Seabrook, Texas. She is one of only two certified Master Stagers in the state of Texas. Before establishing Funkswank Design, Cathy gained hands-on experience by renovating and reselling homes, which gave her a deep understanding of how staged homes can significantly enhance buyer appeal. This expertise allows her to transform vacant or underwhelming spaces into inviting, market-ready environments that help properties sell faster and at top dollar.",
     },
   ];
 
@@ -41,13 +41,13 @@ const AboutUs = () => {
     <>
       <Helmet>
         <title>
-          About Us | Flip on My Dime — Ethical, Low Commission Realtors in
+          About Us | Post Oak Realty Advisors — Ethical, Low Commission Realtors in
           Houston
         </title>
 
         <meta
           name="description"
-          content="Flip on My Dime is a Houston-based, ethical real estate company offering low-commission realtor services, fair cash offers, and full-service renovation-to-sale solutions. Meet the team committed to transparency, value, and helping homeowners sell for top dollar."
+          content="Post Oak Realty Advisors is a Houston-based, ethical real estate company offering low-commission realtor services, fair cash offers, and full-service renovation-to-sale solutions. Meet the team committed to transparency, value, and helping homeowners sell for top dollar."
         />
 
         <meta
@@ -55,18 +55,18 @@ const AboutUs = () => {
           content="ethical real estate company, low commission realtor Houston, full service realtor low fees, fair honest cash offer, cash home buyers Houston, renovate before you sell, sell your home for less commission, Houston real estate experts"
         />
 
-        <link rel="canonical" href="https://fliponmydime.com/about-us" />
+        <link rel="canonical" href="https://postoakrealtytx.com/about-us" />
 
         <meta
           property="og:title"
-          content="Meet the Team: The Ethical, Low Commission Realtors of Flip on My Dime"
+          content="Meet the Team: The Ethical, Low Commission Realtors of Post Oak Realty Advisors"
         />
         <meta
           property="og:description"
           content="Learn about Neal, Puja, and our partners. We are Houston's trusted real estate experts committed to transparency, value, and maximizing your home sale profit."
         />
-        <meta property="og:url" content="https://fliponmydime.com/about-us" />
-        <meta property="og:site_name" content="Flip on My Dime" />
+        <meta property="og:url" content="https://postoakrealtytx.com/about-us" />
+        <meta property="og:site_name" content="Post Oak Realty Advisors" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={socialImage} />
         <meta property="og:image:width" content="1200" />
@@ -76,7 +76,7 @@ const AboutUs = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Houston Real Estate Experts: Meet the Flip on My Dime Team"
+          content="Houston Real Estate Experts: Meet the Post Oak Realty Advisors Team"
         />
         <meta
           name="twitter:description"
@@ -88,10 +88,10 @@ const AboutUs = () => {
           {`{
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Flip on My Dime",
-      "url": "https://fliponmydime.com/about-us",
+      "name": "Post Oak Realty Advisors",
+      "url": "https://postoakrealtytx.com/about-us",
       "telephone": "+1-713-497-6931",
-      "description": "Flip on My Dime is a Houston-based real estate company offering low commission realtor services, cash home purchases, and renovation-first selling strategies with transparent fees.",
+      "description": "Post Oak Realty Advisors is a Houston-based real estate company offering low commission realtor services, cash home purchases, and renovation-first selling strategies with transparent fees.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Clear Lake City",
@@ -99,7 +99,7 @@ const AboutUs = () => {
         "addressCountry": "US"
       },
       "areaServed": ["Houston","Pearland","Friendswood","Clear Lake","League City","Sugar Land"],
-      "sameAs": ["https://fliponmydime.com/"]
+      "sameAs": ["https://postoakrealtytx.com/"]
     }`}
         </script>
       </Helmet>

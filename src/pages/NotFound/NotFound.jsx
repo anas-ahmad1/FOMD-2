@@ -20,7 +20,7 @@ const NotFound = () => (
       <title>Page Not Found | Post Oak Realty Advisors</title>
       <meta name="robots" content="noindex" />
     </Helmet>
-    <h1 style={{ fontWeight: 300, fontSize: "3rem" }}>404</h1>
+    <h1 style={{ fontWeight: 300, fontSize: "clamp(2.25rem, 6vw, 3rem)" }}>404</h1>
     <p>Sorry, we couldn&apos;t find that page.</p>
     <Link to="/" style={{ color: "white", textDecoration: "underline" }}>
       Back to home

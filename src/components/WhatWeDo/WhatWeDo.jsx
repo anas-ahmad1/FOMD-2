@@ -47,7 +47,10 @@ const WhatWeDo = () => {
               <h3 className="info-title">{box.title}</h3>
               <p className="info-text">{box.text}</p>
               <Link to={box.to} className="info-link">
-                {box.linkText} →
+                {box.linkText}
+                <span className="info-link-arrow" aria-hidden="true">
+                  →
+                </span>
               </Link>
             </article>
           ))}

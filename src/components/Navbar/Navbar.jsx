@@ -22,6 +22,21 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock page scroll while the drawer is open and close it with Escape
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previous;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [isOpen]);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -44,14 +59,35 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="hamburger" onClick={toggleMenu}>
+          <button
+            type="button"
+            className="hamburger"
+            onClick={toggleMenu}
+            aria-label="Open menu"
+            aria-expanded={isOpen}
+            aria-controls="site-menu"
+          >
             &#9776;
-          </div>
+          </button>
 
-          <div className={`nav-container-right ${isOpen ? "open" : ""}`}>
-            <div className="close-btn" onClick={toggleMenu}>
+          <div
+            className={`nav-backdrop ${isOpen ? "open" : ""}`}
+            onClick={closeMenu}
+            aria-hidden="true"
+          />
+
+          <div
+            id="site-menu"
+            className={`nav-container-right ${isOpen ? "open" : ""}`}
+          >
+            <button
+              type="button"
+              className="close-btn"
+              onClick={closeMenu}
+              aria-label="Close menu"
+            >
               &times;
-            </div>
+            </button>
 
             <div
               className={`nav-item ${

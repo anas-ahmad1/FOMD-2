@@ -12,7 +12,9 @@
   font-family: "Quicksand", sans-serif;
   /* font-weight: 400; */
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+  letter-spacing: 0.04em;
+  line-height: 1.25;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
@@ -28,8 +30,8 @@
   }
 
   .section-header h2 {
-    font-weight: 300;
-    font-size: 2rem;
     width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }

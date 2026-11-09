@@ -29,3 +29,19 @@ ul li:hover::before {
     }
 }
 
+
+.cash-offer-points h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.cash-offer-points ul {
+  margin-bottom: 0;
+}
+
+.cash-offer-points li {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.9;
+}

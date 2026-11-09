@@ -1,6 +1,3 @@
-@media (max-width: 1300px) {
-
-    .testimonial-header{
-        font-size: 3rem !important;
-    }
+.testimonial-header {
+    font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem) !important;
 }
